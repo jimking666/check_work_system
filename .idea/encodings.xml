@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/clazz" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/clazz/clazz-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/clazz/clazz-biz" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/course" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/course/course-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/course/course-biz" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/student" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/student/student-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/student/student-biz" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/submitwork" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/submitwork/submitwork-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/submitwork/submitwork-biz" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/teacher" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/teacher/teacher-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/teacher/teacher-biz" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/work" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/work/work-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/work/work-biz" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/core-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/core-biz" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/inf" charset="UTF-8" />
+  </component>
+</project>

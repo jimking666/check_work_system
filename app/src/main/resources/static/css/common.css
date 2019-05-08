@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+#wrap {
+	min-width: 100%;
+	position: absolute;
+	background: #eff3f6 bottom;
+	min-height: 100%;
+}
+/*左侧*/
+.leftMeun {
+	position: absolute;
+	box-sizing: border-box;
+	width: 200px;
+	height: 100%;
+	background: #4d5e70 bottom;
+}
+#logoDiv {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 70px;
+	background-color: #354457;
+	font-size: 17px;
+	color: #fff;
+	text-align:center;
+	vertical-align: bottom;
+}
+
+#personInfor {
+	padding: 10px 5px 10px;
+	margin: 0 5px;
+	color: #b3bcc5;
+	border-bottom: 1px solid #354457;
+	overflow-x: hidden;
+	padding-left: 20px;
+}
+#personInfor p {
+	font-size: 12px;
+	margin-left: -5px;
+}
+#personInfor a {
+	color: #B3BCC5;
+	text-decoration: underline;
+}
+.meun-title {
+	color: #828e9a;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 18px;
+	font-weight: bold;
+	text-indent:18px;
+}
+.meun-item {
+	text-indent:20px;
+	line-height: 40px;
+	height: 40px;
+	color: #aab1b7;
+	cursor: pointer;
+}
+.meun-item-active {
+    background-color: #3d4e60;
+    border-right: 4px solid #647f9d;
+    color: #fff;
+}
+/*右侧*/
+#rightContent {
+    box-sizing: border-box;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 200px;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    clear: both;
+    color: #717592;
+    min-width: 100%;
+    min-height: 500px;
+}
+.right-ss{
+	top: 10px;
+}
+.input-sm {
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+.biao{
+	padding-top: 80px;
+	min-height: 500px;
+}
+.cx{
+	margin: 0 auto;
+	width: 300px;
+}
+.dao{
+	margin: 0 auto;
+	width: 268px;
+}
+.main {
+	background: #fff;
+	width: 730px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 10px;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="app" />
+        <module name="clazz-api" />
+        <module name="clazz-biz" />
+        <module name="core-api" />
+        <module name="core-biz" />
+        <module name="course-api" />
+        <module name="course-biz" />
+        <module name="inf" />
+        <module name="student-api" />
+        <module name="student-biz" />
+        <module name="submitwork-api" />
+        <module name="submitwork-biz" />
+        <module name="teacher-api" />
+        <module name="teacher-biz" />
+        <module name="work-api" />
+        <module name="work-biz" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

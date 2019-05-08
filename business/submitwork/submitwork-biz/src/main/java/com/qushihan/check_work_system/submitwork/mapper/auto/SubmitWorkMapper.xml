@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qushihan.check_work_system.submitwork.mapper.auto.SubmitWorkMapper">
+  <resultMap id="BaseResultMap" type="com.qushihan.check_work_system.submitwork.model.auto.SubmitWork">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="submit_work_id" jdbcType="BIGINT" property="submitWorkId" />
+    <result column="submit_work_content" jdbcType="VARCHAR" property="submitWorkContent" />
+    <result column="high_repetitive_rate" jdbcType="REAL" property="highRepetitiveRate" />
+    <result column="score" jdbcType="INTEGER" property="score" />
+    <result column="work_id" jdbcType="BIGINT" property="workId" />
+    <result column="student_id" jdbcType="BIGINT" property="studentId" />
+    <result column="isdel" jdbcType="BIT" property="isdel" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, submit_work_id, submit_work_content, high_repetitive_rate, score, work_id, student_id, 
+    isdel, create_time, update_time
+  </sql>
+  <select id="selectByExample" parameterType="com.qushihan.check_work_system.submitwork.model.auto.SubmitWorkExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from submit_work
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from submit_work
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from submit_work
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.qushihan.check_work_system.submitwork.model.auto.SubmitWorkExample">
+    delete from submit_work
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.qushihan.check_work_system.submitwork.model.auto.SubmitWork">
+    insert into submit_work (id, submit_work_id, submit_work_content, 
+      high_repetitive_rate, score, work_id, 
+      student_id, isdel, create_time, 
+      update_time)
+    values (#{id,jdbcType=BIGINT}, #{submitWorkId,jdbcType=BIGINT}, #{submitWorkContent,jdbcType=VARCHAR}, 
+      #{highRepetitiveRate,jdbcType=REAL}, #{score,jdbcType=INTEGER}, #{workId,jdbcType=BIGINT}, 
+      #{studentId,jdbcType=BIGINT}, #{isdel,jdbcType=BIT}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qushihan.check_work_system.submitwork.model.auto.SubmitWork">
+    insert into submit_work
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="submitWorkId != null">
+        submit_work_id,
+      </if>
+      <if test="submitWorkContent != null">
+        submit_work_content,
+      </if>
+      <if test="highRepetitiveRate != null">
+        high_repetitive_rate,
+      </if>
+      <if test="score != null">
+        score,
+      </if>
+      <if test="workId != null">
+        work_id,
+      </if>
+      <if test="studentId != null">
+        student_id,
+      </if>
+      <if test="isdel != null">
+        isdel,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="submitWorkId != null">
+        #{submitWorkId,jdbcType=BIGINT},
+      </if>
+      <if test="submitWorkContent != null">
+        #{submitWorkContent,jdbcType=VARCHAR},
+      </if>
+      <if test="highRepetitiveRate != null">
+        #{highRepetitiveRate,jdbcType=REAL},
+      </if>
+      <if test="score != null">
+        #{score,jdbcType=INTEGER},
+      </if>
+      <if test="workId != null">
+        #{workId,jdbcType=BIGINT},
+      </if>
+      <if test="studentId != null">
+        #{studentId,jdbcType=BIGINT},
+      </if>
+      <if test="isdel != null">
+        #{isdel,jdbcType=BIT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.qushihan.check_work_system.submitwork.model.auto.SubmitWorkExample" resultType="java.lang.Long">
+    select count(*) from submit_work
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update submit_work
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.submitWorkId != null">
+        submit_work_id = #{record.submitWorkId,jdbcType=BIGINT},
+      </if>
+      <if test="record.submitWorkContent != null">
+        submit_work_content = #{record.submitWorkContent,jdbcType=VARCHAR},
+      </if>
+      <if test="record.highRepetitiveRate != null">
+        high_repetitive_rate = #{record.highRepetitiveRate,jdbcType=REAL},
+      </if>
+      <if test="record.score != null">
+        score = #{record.score,jdbcType=INTEGER},
+      </if>
+      <if test="record.workId != null">
+        work_id = #{record.workId,jdbcType=BIGINT},
+      </if>
+      <if test="record.studentId != null">
+        student_id = #{record.studentId,jdbcType=BIGINT},
+      </if>
+      <if test="record.isdel != null">
+        isdel = #{record.isdel,jdbcType=BIT},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update submit_work
+    set id = #{record.id,jdbcType=BIGINT},
+      submit_work_id = #{record.submitWorkId,jdbcType=BIGINT},
+      submit_work_content = #{record.submitWorkContent,jdbcType=VARCHAR},
+      high_repetitive_rate = #{record.highRepetitiveRate,jdbcType=REAL},
+      score = #{record.score,jdbcType=INTEGER},
+      work_id = #{record.workId,jdbcType=BIGINT},
+      student_id = #{record.studentId,jdbcType=BIGINT},
+      isdel = #{record.isdel,jdbcType=BIT},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qushihan.check_work_system.submitwork.model.auto.SubmitWork">
+    update submit_work
+    <set>
+      <if test="submitWorkId != null">
+        submit_work_id = #{submitWorkId,jdbcType=BIGINT},
+      </if>
+      <if test="submitWorkContent != null">
+        submit_work_content = #{submitWorkContent,jdbcType=VARCHAR},
+      </if>
+      <if test="highRepetitiveRate != null">
+        high_repetitive_rate = #{highRepetitiveRate,jdbcType=REAL},
+      </if>
+      <if test="score != null">
+        score = #{score,jdbcType=INTEGER},
+      </if>
+      <if test="workId != null">
+        work_id = #{workId,jdbcType=BIGINT},
+      </if>
+      <if test="studentId != null">
+        student_id = #{studentId,jdbcType=BIGINT},
+      </if>
+      <if test="isdel != null">
+        isdel = #{isdel,jdbcType=BIT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qushihan.check_work_system.submitwork.model.auto.SubmitWork">
+    update submit_work
+    set submit_work_id = #{submitWorkId,jdbcType=BIGINT},
+      submit_work_content = #{submitWorkContent,jdbcType=VARCHAR},
+      high_repetitive_rate = #{highRepetitiveRate,jdbcType=REAL},
+      score = #{score,jdbcType=INTEGER},
+      work_id = #{workId,jdbcType=BIGINT},
+      student_id = #{studentId,jdbcType=BIGINT},
+      isdel = #{isdel,jdbcType=BIT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
