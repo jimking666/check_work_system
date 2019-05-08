@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0a978ed-af39-4987-8c2a-a260de65e57a" name="Default Changelist" comment="" />
+    <list default="true" id="a0a978ed-af39-4987-8c2a-a260de65e57a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inf/inf.iml" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/app/target/" />
     <ignored path="$PROJECT_DIR$/core/target/" />
@@ -117,27 +120,59 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1875386883">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gitignore" value="1" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/student/student-api/target/classes/com/qushihan/check_work_system/student/dto/StudentDetailRequest.class">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/resources/generatorConfig.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/business/submitwork/submitwork-biz/pom.xml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -245,6 +280,9 @@
     <replaceStrings>
       <replace>work_submit_system.</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -419,8 +457,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -431,28 +469,12 @@
             <path>
               <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
               <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
               <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -466,7 +488,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="Work&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/business/work/work-api/src/main/java/com/qushihan/check_work_system/work/dto/WorkDto.java&#10;SubmitWorkDto&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/business/submitwork/submitwork-api/src/main/java/com/qushihan/check_work_system/submitwork/dto/SubmitWorkDto.java&#10;WorkDto&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/business/work/work-api/src/main/java/com/qushihan/check_work_system/work/dto/WorkDto.java&#10;SubmitWork&#9;PSI&#9;JAVA://com.qushihan.check_work_system.submitwork.model.auto.SubmitWork&#10;CreateCourseStatus&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/core/core-api/src/main/java/com/qushihan/check_work_system/core/enums/CreateCourseTeacherClazzStatus.java" />
+    <property name="SearchEverywhereHistoryKey" value="gitignore&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/biyesheji/check_work_system/app/.gitignore&#10;workSpa&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/biyesheji/check_work_system/.idea/workspace.xml&#10;Work&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/business/work/work-api/src/main/java/com/qushihan/check_work_system/work/dto/WorkDto.java&#10;SubmitWorkDto&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/business/submitwork/submitwork-api/src/main/java/com/qushihan/check_work_system/submitwork/dto/SubmitWorkDto.java&#10;WorkDto&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/business/work/work-api/src/main/java/com/qushihan/check_work_system/work/dto/WorkDto.java&#10;SubmitWork&#9;PSI&#9;JAVA://com.qushihan.check_work_system.submitwork.model.auto.SubmitWork&#10;CreateCourseStatus&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/core/core-api/src/main/java/com/qushihan/check_work_system/core/enums/CreateCourseTeacherClazzStatus.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557126625636" />
@@ -544,16 +566,18 @@
       <workItem from="1557126783062" duration="1687000" />
       <workItem from="1557297953848" duration="683000" />
       <workItem from="1557301177906" duration="201000" />
+      <workItem from="1557303001167" duration="821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217943000" />
+    <option name="totallyTimeSpent" value="218764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-281" y="-1080" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2683706" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27103302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -570,7 +594,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.40040243" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.38229376" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3189135" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
@@ -595,20 +619,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/clazzStudentDetail.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="54" column="30" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/work/work-api/src/main/java/com/qushihan/check_work_system/work/dto/DeleteWorkRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/clazzManagement.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2185">
@@ -860,6 +870,9 @@
     <entry file="file://$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/resources/generatorConfig.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/business/submitwork/submitwork-biz/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/biz/service/SubmitWorkBizService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="897">
@@ -905,11 +918,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/business/submitwork/submitwork-biz/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
