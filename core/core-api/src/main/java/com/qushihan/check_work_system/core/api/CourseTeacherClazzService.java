@@ -18,11 +18,11 @@ public interface CourseTeacherClazzService {
     String createCourseTeacherClazz(Long courseId, Long teacherId, Long clazzId);
 
     /**
-     * 查询所有课程教师班级记录
+     * 通过教师id得到课程教师班级Dto
      *
      * @return
      */
-    List<CourseTeacherClazzDto> queryAllCourseTeacherClazz();
+    List<CourseTeacherClazzDto> getByTeacherId(Long teacherId);
 
     /**
      * 删除课程教师班级

@@ -58,22 +58,23 @@ public class CourseTeacherClazzServiceImpl implements CourseTeacherClazzService 
     }
 
     @Override
-    public List<CourseTeacherClazzDto> queryAllCourseTeacherClazz() {
-        List<CourseTeacherClazz> courseTeacherClazzes = courseTeacherClazzDao.queryAllCourseTeacherClazz();
+    public List<CourseTeacherClazzDto> getByTeacherId(Long teacherId) {
+        List<CourseTeacherClazz> courseTeacherClazzes = courseTeacherClazzDao.getByTeacherId(teacherId);
         if (CollectionUtils.isEmpty(courseTeacherClazzes)) {
-            return Collections.EMPTY_LIST;
+            return Collections.emptyList();
         }
-        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzes.stream().map(courseTeacherClazz -> {
-            CourseTeacherClazzDto courseTeacherClazzDto = new CourseTeacherClazzDto();
-            BeanUtils.copyProperties(courseTeacherClazz, courseTeacherClazzDto);
-            CourseDto courseDto = courseService.queryCourseDtoByCourseId(courseTeacherClazz.getCourseId());
-            TeacherDto teacherDto = teacherService.queryTeacherDtoByTeacherId(courseTeacherClazz.getTeacherId());
-            ClazzDto clazzDto = clazzService.queryClazzDtoByClazzId(courseTeacherClazz.getClazzId());
-            courseTeacherClazzDto.setCourseName(courseDto.getCourseName());
-            courseTeacherClazzDto.setTeacherName(teacherDto.getTeacherName());
-            courseTeacherClazzDto.setClazzName(clazzDto.getClazzName());
-            return courseTeacherClazzDto;
-        }).collect(Collectors.toList());
+        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzes.stream()
+                .map(courseTeacherClazz -> {
+                    CourseTeacherClazzDto courseTeacherClazzDto = new CourseTeacherClazzDto();
+                    BeanUtils.copyProperties(courseTeacherClazz, courseTeacherClazzDto);
+                    CourseDto courseDto = courseService.queryCourseDtoByCourseId(courseTeacherClazz.getCourseId());
+                    TeacherDto teacherDto = teacherService.queryTeacherDtoByTeacherId(courseTeacherClazz.getTeacherId());
+                    ClazzDto clazzDto = clazzService.queryClazzDtoByClazzId(courseTeacherClazz.getClazzId());
+                    courseTeacherClazzDto.setCourseName(courseDto.getCourseName());
+                    courseTeacherClazzDto.setTeacherName(teacherDto.getTeacherName());
+                    courseTeacherClazzDto.setClazzName(clazzDto.getClazzName());
+                    return courseTeacherClazzDto;
+                }).collect(Collectors.toList());
         return courseTeacherClazzDtos;
     }
 

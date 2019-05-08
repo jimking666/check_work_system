@@ -62,13 +62,17 @@ public class CourseTeacherClazzDao {
     }
 
     /**
-     * 查询所有课程教师班级记录
+     * 通过教师id查询课程教师班级记录
      *
      * @return
      */
-    public List<CourseTeacherClazz> queryAllCourseTeacherClazz() {
+    public List<CourseTeacherClazz> getByTeacherId(Long teacherId) {
+        if (!Optional.ofNullable(teacherId).isPresent()) {
+            return Collections.emptyList();
+        }
         CourseTeacherClazzExample courseTeacherClazzExample = new CourseTeacherClazzExample();
         CourseTeacherClazzExample.Criteria criteria = courseTeacherClazzExample.createCriteria();
+        criteria.andTeacherIdEqualTo(teacherId);
         criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
         return courseTeacherClazzMapper.selectByExample(courseTeacherClazzExample);
     }

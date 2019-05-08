@@ -2,6 +2,9 @@ package com.qushihan.check_work_system.app.controller.index;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +16,7 @@ import com.qushihan.check_work_system.core.api.CourseTeacherClazzService;
 import com.qushihan.check_work_system.core.dto.CourseTeacherClazzDto;
 import com.qushihan.check_work_system.course.api.CourseService;
 import com.qushihan.check_work_system.course.dto.CourseDto;
+import com.qushihan.check_work_system.teacher.dto.TeacherDto;
 
 @Controller
 @RequestMapping("/index")
@@ -55,10 +59,14 @@ public class IndexController {
      * @return
      */
     @RequestMapping("/workManagement")
-    public String forwardWorkManagement(Map map) {
+    public String forwardWorkManagement(Map map, HttpServletRequest request) {
         List<CourseDto> courseDtos = courseService.queryAllCourse();
         List<ClazzDto> clazzDtos = clazzService.queryAllClazz();
-        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.queryAllCourseTeacherClazz();
+        TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
+        Long teacherId = Optional.ofNullable(teacherDto)
+                .map(TeacherDto::getTeacherId)
+                .orElse(0L);
+        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherId);
         map.put("courseDtos", courseDtos);
         map.put("clazzDtos", clazzDtos);
         map.put("courseTeacherClazzDtos", courseTeacherClazzDtos);
@@ -73,10 +81,14 @@ public class IndexController {
      * @return
      */
     @RequestMapping("/courseManagement")
-    public String forwardCourseManagement(Map map) {
+    public String forwardCourseManagement(Map map, HttpServletRequest request) {
         List<CourseDto> courseDtos = courseService.queryAllCourse();
         List<ClazzDto> clazzDtos = clazzService.queryAllClazz();
-        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.queryAllCourseTeacherClazz();
+        TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
+        Long teacherId = Optional.ofNullable(teacherDto)
+                .map(TeacherDto::getTeacherId)
+                .orElse(0L);
+        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherId);
         map.put("courseDtos", courseDtos);
         map.put("clazzDtos", clazzDtos);
         map.put("courseTeacherClazzDtos", courseTeacherClazzDtos);
@@ -91,10 +103,14 @@ public class IndexController {
      * @return
      */
     @RequestMapping("/clazzManagement")
-    public String forwardClazzManagement(Map map) {
+    public String forwardClazzManagement(Map map, HttpServletRequest request) {
         List<CourseDto> courseDtos = courseService.queryAllCourse();
         List<ClazzDto> clazzDtos = clazzService.queryAllClazz();
-        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.queryAllCourseTeacherClazz();
+        TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
+        Long teacherId = Optional.ofNullable(teacherDto)
+                .map(TeacherDto::getTeacherId)
+                .orElse(0L);
+        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherId);
         map.put("courseDtos", courseDtos);
         map.put("clazzDtos", clazzDtos);
         map.put("courseTeacherClazzDtos", courseTeacherClazzDtos);
