@@ -50,6 +50,25 @@
                 })
             })
 
+            // 搜索课程教师班级
+            $("#searchCourseTeacherClazz").click(function () {
+                $.ajax({
+                    url: "/courseTeacherClazz/getCourseTeacherClazzBySearch",
+                    type: "post",
+                    data: JSON.stringify({
+                        "searchCourseName": $("#searchCourseName").val()
+                    }),
+                    contentType: "application/json;charset=utf-8",
+                    statusCode: {
+                        200: function (data) {
+                            if (data.indexOf("查询成功") != -1) {
+                                window.location = "/workManagement"
+                            }
+                        }
+                    }
+                })
+            })
+            
             // 创建课程教师班级事件
             $("#createCourseTeacherClazz").click(function () {
                 if ($("#courseId2").val() == "" || $("#clazzId2").val() == "") {
@@ -119,6 +138,25 @@
                 })
             })
 
+            // 搜索课程
+            $("#searchCourse").click(function () {
+                $.ajax({
+                    url: "/course/getCourseBySearch",
+                    type: "post",
+                    data: JSON.stringify({
+                        "searchCourseName": $("#searchCourseName1").val()
+                    }),
+                    contentType: "application/json;charset=utf-8",
+                    statusCode: {
+                        200: function (data) {
+                            if (data.indexOf("查询成功") != -1) {
+                                window.location = "/courseManagement"
+                            }
+                        }
+                    }
+                })
+            })
+
             // 创建课程事件
             $("#createCourse").click(function () {
                 if ($("#courseName").val() == "") {
@@ -166,6 +204,25 @@
                             if (data.indexOf("删除成功") != -1) {
                                 alert("删 除 成 功 !")
                                 window.location = "/courseManagement"
+                            }
+                        }
+                    }
+                })
+            })
+
+            // 搜索班级
+            $("#searchClazz").click(function () {
+                $.ajax({
+                    url: "/clazz/getClazzBySearch",
+                    type: "post",
+                    data: JSON.stringify({
+                        "searchClazzName": $("#searchClazzName").val()
+                    }),
+                    contentType: "application/json;charset=utf-8",
+                    statusCode: {
+                        200: function (data) {
+                            if (data.indexOf("查询成功") != -1) {
+                                window.location = "/clazzManagement"
                             }
                         }
                     }
@@ -314,8 +371,8 @@
         <div class="gl zuoyeguanli">
             <div class="cx">
                 <div class="input-group">
-                    <input placeholder="输入发布作业名查询" class="form-control right-ss"/>
-                    <span class="input-group-btn"><button class="btn btn-default right-ss">查询</button></span>
+                    <input placeholder="输入课程名查询" class="form-control right-ss" id="searchCourseName"/>
+                    <span class="input-group-btn"><button class="btn btn-default right-ss" id="searchCourseTeacherClazz">查询</button></span>
                 </div>
             </div>
             <div>
@@ -468,8 +525,8 @@
         <div class="gl kechengguanli" style="display:none">
             <div class="cx">
                 <div class="input-group">
-                    <input placeholder="输入课程名查询" class="form-control right-ss"/>
-                    <span class="input-group-btn"><button class="btn btn-default right-ss">查询</button></span>
+                    <input placeholder="输入课程名查询" class="form-control right-ss" id="searchCourseName1"/>
+                    <span class="input-group-btn"><button class="btn btn-default right-ss" id="searchCourse">查询</button></span>
                 </div>
             </div>
             <div>
@@ -496,8 +553,8 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <#if courseDtos??>
-                        <#list courseDtos as courseDto>
+                    <#if searchCourseDtos??>
+                        <#list searchCourseDtos as courseDto>
                             <tr>
                                 <td>${courseDto.courseId}</td>
                                 <td>${courseDto.courseName}</td>
@@ -583,8 +640,8 @@
         <div class="gl banjiguanli" style="display:none">
             <div class="cx">
                 <div class="input-group">
-                    <input placeholder="输入班级名查询" class="form-control right-ss"/>
-                    <span class="input-group-btn"><button class="btn btn-default right-ss">查询</button></span>
+                    <input placeholder="输入班级名查询" class="form-control right-ss" id="searchClazzName"/>
+                    <span class="input-group-btn"><button class="btn btn-default right-ss" id="searchClazz">查询</button></span>
                 </div>
             </div>
             <div>
@@ -613,8 +670,8 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <#if clazzDtos??>
-                        <#list clazzDtos as clazzDto>
+                    <#if searchClazzDtos??>
+                        <#list searchClazzDtos as clazzDto>
                         <tr>
                             <td>${clazzDto.clazzId}</td>
                             <td>${clazzDto.clazzName}</td>

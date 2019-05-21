@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -85,6 +86,22 @@ public class CourseDao {
         CourseExample courseExample = new CourseExample();
         CourseExample.Criteria criteria = courseExample.createCriteria();
         criteria.andCourseIdEqualTo(courseId);
+        criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
+        return courseMapper.selectByExample(courseExample);
+    }
+
+    /**
+     * 通过课程名称搜索课程
+     *
+     * @param searchCourseName
+     * @return
+     */
+    public List<Course> getBySearchCourseName(String searchCourseName) {
+        CourseExample courseExample = new CourseExample();
+        CourseExample.Criteria criteria = courseExample.createCriteria();
+        if (StringUtils.isNotEmpty(searchCourseName)) {
+            criteria.andCourseNameLike(searchCourseName + "%");
+        }
         criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
         return courseMapper.selectByExample(courseExample);
     }

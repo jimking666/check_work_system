@@ -1,8 +1,11 @@
 package com.qushihan.check_work_system.app.controller.clazz;
 
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.qushihan.check_work_system.clazz.dto.ClazzDto;
+import com.qushihan.check_work_system.clazz.dto.GetClazzBySearchRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +17,9 @@ import com.qushihan.check_work_system.clazz.api.ClazzService;
 import com.qushihan.check_work_system.clazz.dto.CreateClazzRequest;
 import com.qushihan.check_work_system.clazz.dto.DeleteClazzRequest;
 import com.qushihan.check_work_system.inf.util.TransitionUtil;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/clazz")
@@ -46,5 +52,27 @@ public class ClazzController {
         Long clazzId = TransitionUtil.stringToLong(deleteClazzRequest.getClazzId());
         String deleteMessge = clazzService.deleteClazz(clazzId);
         PrintWriterUtil.print(deleteMessge, response);
+    }
+
+    /**
+     * 通过班级名称查询班级
+     *
+     * @param getClazzBySearchRequest
+     * @param request
+     * @param response
+     */
+    @RequestMapping("/getClazzBySearch")
+    public void getClazzBySearch(@RequestBody GetClazzBySearchRequest getClazzBySearchRequest, HttpServletRequest request, HttpServletResponse response) {
+        String searchClazzName = getClazzBySearchRequest.getSearchClazzName();
+        List<ClazzDto> searchClazzDtos = clazzService.getBySearchClazzName(searchClazzName);
+        List<String> clazzNames = searchClazzDtos.stream()
+                .map(ClazzDto::getClazzName)
+                .collect(Collectors.toList());
+        List<ClazzDto> clazzDtos = clazzService.queryAllClazz();
+        clazzDtos = clazzDtos.stream()
+                .filter(clazzDto -> clazzNames.contains(clazzDto.getClazzName()))
+                .collect(Collectors.toList());
+        request.getServletContext().setAttribute("searchClazzDtos", clazzDtos);
+        PrintWriterUtil.print("查询成功", response);
     }
 }

@@ -51,69 +51,99 @@ public class IndexController {
         return "register";
     }
 
+//    /**
+//     * 作业管理页面
+//     *
+//     * @param map
+//     *
+//     * @return
+//     */
+//    @RequestMapping("/workManagement")
+//    public String forwardWorkManagement(Map map, HttpServletRequest request) {
+//        List<CourseDto> courseDtos = courseService.queryAllCourse();
+//        List<ClazzDto> clazzDtos = clazzService.queryAllClazz();
+//        TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
+//        Long teacherId = Optional.ofNullable(teacherDto)
+//                .map(TeacherDto::getTeacherId)
+//                .orElse(0L);
+//        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherId);
+//        map.put("courseDtos", courseDtos);
+//        map.put("clazzDtos", clazzDtos);
+//        map.put("courseTeacherClazzDtos", courseTeacherClazzDtos);
+//        return "workManagement";
+//    }
+
     /**
      * 作业管理页面
-     *
-     * @param map
      *
      * @return
      */
     @RequestMapping("/workManagement")
-    public String forwardWorkManagement(Map map, HttpServletRequest request) {
-        List<CourseDto> courseDtos = courseService.queryAllCourse();
-        List<ClazzDto> clazzDtos = clazzService.queryAllClazz();
-        TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
-        Long teacherId = Optional.ofNullable(teacherDto)
-                .map(TeacherDto::getTeacherId)
-                .orElse(0L);
-        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherId);
-        map.put("courseDtos", courseDtos);
-        map.put("clazzDtos", clazzDtos);
-        map.put("courseTeacherClazzDtos", courseTeacherClazzDtos);
+    public String forwardWorkManagement() {
         return "workManagement";
     }
+
+//    /**
+//     * 课程管理页面
+//     *
+//     * @param map
+//     *
+//     * @return
+//     */
+//    @RequestMapping("/courseManagement")
+//    public String forwardCourseManagement(Map map, HttpServletRequest request) {
+//        List<CourseDto> courseDtos = courseService.queryAllCourse();
+//        List<ClazzDto> clazzDtos = clazzService.queryAllClazz();
+//        TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
+//        Long teacherId = Optional.ofNullable(teacherDto)
+//                .map(TeacherDto::getTeacherId)
+//                .orElse(0L);
+//        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherId);
+//        map.put("courseDtos", courseDtos);
+//        map.put("clazzDtos", clazzDtos);
+//        map.put("courseTeacherClazzDtos", courseTeacherClazzDtos);
+//        return "courseManagement";
+//    }
 
     /**
      * 课程管理页面
      *
-     * @param map
-     *
      * @return
      */
     @RequestMapping("/courseManagement")
-    public String forwardCourseManagement(Map map, HttpServletRequest request) {
-        List<CourseDto> courseDtos = courseService.queryAllCourse();
-        List<ClazzDto> clazzDtos = clazzService.queryAllClazz();
-        TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
-        Long teacherId = Optional.ofNullable(teacherDto)
-                .map(TeacherDto::getTeacherId)
-                .orElse(0L);
-        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherId);
-        map.put("courseDtos", courseDtos);
-        map.put("clazzDtos", clazzDtos);
-        map.put("courseTeacherClazzDtos", courseTeacherClazzDtos);
+    public String forwardCourseManagement() {
         return "courseManagement";
     }
+
+//    /**
+//     * 班级管理页面
+//     *
+//     * @param map
+//     *
+//     * @return
+//     */
+//    @RequestMapping("/clazzManagement")
+//    public String forwardClazzManagement(Map map, HttpServletRequest request) {
+//        List<CourseDto> courseDtos = courseService.queryAllCourse();
+//        List<ClazzDto> clazzDtos = clazzService.queryAllClazz();
+//        TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
+//        Long teacherId = Optional.ofNullable(teacherDto)
+//                .map(TeacherDto::getTeacherId)
+//                .orElse(0L);
+//        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherId);
+//        map.put("courseDtos", courseDtos);
+//        map.put("clazzDtos", clazzDtos);
+//        map.put("courseTeacherClazzDtos", courseTeacherClazzDtos);
+//        return "clazzManagement";
+//    }
 
     /**
      * 班级管理页面
      *
-     * @param map
-     *
      * @return
      */
     @RequestMapping("/clazzManagement")
-    public String forwardClazzManagement(Map map, HttpServletRequest request) {
-        List<CourseDto> courseDtos = courseService.queryAllCourse();
-        List<ClazzDto> clazzDtos = clazzService.queryAllClazz();
-        TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
-        Long teacherId = Optional.ofNullable(teacherDto)
-                .map(TeacherDto::getTeacherId)
-                .orElse(0L);
-        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherId);
-        map.put("courseDtos", courseDtos);
-        map.put("clazzDtos", clazzDtos);
-        map.put("courseTeacherClazzDtos", courseTeacherClazzDtos);
+    public String forwardClazzManagement() {
         return "clazzManagement";
     }
 

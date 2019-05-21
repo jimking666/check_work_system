@@ -39,4 +39,11 @@ public interface CourseService {
      * @return
      */
     CourseDto queryCourseDtoByCourseId(Long courseId);
+
+    /**
+     * 通过搜索课程名称获取课程
+     *
+     * @return
+     */
+    List<CourseDto> getBySearchCourseName(String searchCourseName);
 }

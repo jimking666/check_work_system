@@ -1,7 +1,10 @@
 package com.qushihan.check_work_system.app.controller.course;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.qushihan.check_work_system.course.dto.CourseDto;
+import com.qushihan.check_work_system.course.dto.GetCourseBySearchRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +16,9 @@ import com.qushihan.check_work_system.course.api.CourseService;
 import com.qushihan.check_work_system.course.dto.CreateCourseRequest;
 import com.qushihan.check_work_system.course.dto.DeleteCourseRequest;
 import com.qushihan.check_work_system.inf.util.TransitionUtil;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/course")
@@ -45,5 +51,27 @@ public class CourseController {
         Long courseId = TransitionUtil.stringToLong(deleteCourseRequest.getCourseId());
         String deleteMessge = courseService.deleteCourse(courseId);
         PrintWriterUtil.print(deleteMessge, response);
+    }
+
+    /**
+     * 通过课程名称查询课程
+     *
+     * @param getCourseBySearchRequest
+     * @param request
+     * @param response
+     */
+    @RequestMapping("/getCourseBySearch")
+    public void getCourseBySearch(@RequestBody GetCourseBySearchRequest getCourseBySearchRequest, HttpServletRequest request, HttpServletResponse response) {
+        String searchCourseName = getCourseBySearchRequest.getSearchCourseName();
+        List<CourseDto> searchCourseDtos = courseService.getBySearchCourseName(searchCourseName);
+        List<String> courseNames = searchCourseDtos.stream()
+                .map(CourseDto::getCourseName)
+                .collect(Collectors.toList());
+        List<CourseDto> courseDtos = courseService.queryAllCourse();
+        courseDtos = courseDtos.stream()
+                .filter(courseDto -> courseNames.contains(courseDto.getCourseName()))
+                .collect(Collectors.toList());
+        request.getServletContext().setAttribute("searchCourseDtos", courseDtos);
+        PrintWriterUtil.print("查询成功", response);
     }
 }

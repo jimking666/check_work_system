@@ -92,4 +92,16 @@ public class ClazzServiceImpl implements ClazzService {
         }
         return new ClazzDto();
     }
+
+    @Override
+    public List<ClazzDto> getBySearchClazzName(String searchClazzName) {
+        List<Clazz> clazzes = clazzDao.getBySearchClazzName(searchClazzName);
+        return clazzes.stream()
+                .map(clazz -> {
+                    ClazzDto clazzDto = new ClazzDto();
+                    BeanUtils.copyProperties(clazz, clazzDto);
+                    return clazzDto;
+                })
+                .collect(Collectors.toList());
+    }
 }

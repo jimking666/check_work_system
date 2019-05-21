@@ -73,4 +73,16 @@ public class CourseServiceImpl implements CourseService {
         }
         return new CourseDto();
     }
+
+    @Override
+    public List<CourseDto> getBySearchCourseName(String searchCourseName) {
+        List<Course> courses = courseDao.getBySearchCourseName(searchCourseName);
+        return courses.stream()
+                .map(course -> {
+                    CourseDto courseDto = new CourseDto();
+                    BeanUtils.copyProperties(course, courseDto);
+                    return courseDto;
+                })
+                .collect(Collectors.toList());
+    }
 }
