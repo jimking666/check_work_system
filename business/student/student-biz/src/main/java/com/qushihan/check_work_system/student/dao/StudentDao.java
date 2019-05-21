@@ -3,6 +3,7 @@ package com.qushihan.check_work_system.student.dao;
 import java.util.Collections;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.CollectionUtils;
@@ -62,6 +63,22 @@ public class StudentDao {
         StudentExample studentExample = new StudentExample();
         StudentExample.Criteria criteria = studentExample.createCriteria();
         criteria.andStudentIdIn(studentIds);
+        criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
+        return studentMapper.selectByExample(studentExample);
+    }
+
+    /**
+     * 通过学生名称搜索学生
+     *
+     * @param searchStudentName
+     * @return
+     */
+    public List<Student> getBySearchStudentName(String searchStudentName) {
+        StudentExample studentExample = new StudentExample();
+        StudentExample.Criteria criteria = studentExample.createCriteria();
+        if (StringUtils.isNotEmpty(searchStudentName)) {
+            criteria.andStudentNameLike(searchStudentName + "%");
+        }
         criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
         return studentMapper.selectByExample(studentExample);
     }

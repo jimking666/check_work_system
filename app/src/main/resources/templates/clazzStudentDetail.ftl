@@ -45,6 +45,24 @@
                     }
                 })
             })
+            // 搜索学生
+            $("#searchStudent").click(function () {
+                $.ajax({
+                    url: "/student/getStudentBySearch",
+                    type: "post",
+                    data: JSON.stringify({
+                        "searchStudentName": $("#searchStudentName").val()
+                    }),
+                    contentType: "application/json;charset=utf-8",
+                    statusCode: {
+                        200: function (data) {
+                            if (data.indexOf("查询成功") != -1) {
+                                window.location = "/clazzStudentDetail"
+                            }
+                        }
+                    }
+                })
+            })
         })
     </script>
 </head>
@@ -74,8 +92,8 @@
         <div class="gl xueshengxiangqing">
             <div class="cx">
                 <div class="input-group">
-                    <input placeholder="输入学生名查询" class="form-control right-ss"/>
-                    <span class="input-group-btn"><button class="btn btn-default right-ss">查询</button></span>
+                    <input placeholder="输入学生名查询" class="form-control right-ss" id="searchStudentName"/>
+                    <span class="input-group-btn"><button class="btn btn-default right-ss" id="searchStudent">查询</button></span>
                 </div>
             </div>
             <div class="biao">

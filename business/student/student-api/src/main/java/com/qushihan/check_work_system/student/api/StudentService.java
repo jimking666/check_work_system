@@ -28,4 +28,11 @@ public interface StudentService {
      * @return
      */
     List<StudentDto> getByStudentIdList(List<Long> studentIds);
+
+    /**
+     * 通过搜索学生名称获取学生
+     *
+     * @return
+     */
+    List<StudentDto> getBySearchStudentName(String searchStudentName);
 }
