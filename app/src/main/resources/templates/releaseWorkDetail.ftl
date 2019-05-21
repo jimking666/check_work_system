@@ -46,6 +46,25 @@
                 })
             })
 
+            // 搜索作业
+            $("#searchWork").click(function () {
+                $.ajax({
+                    url: "/work/getWorkBySearch",
+                    type: "post",
+                    data: JSON.stringify({
+                        "searchWorkTitle": $("#searchWorkTitle").val()
+                    }),
+                    contentType: "application/json;charset=utf-8",
+                    statusCode: {
+                        200: function (data) {
+                            if (data.indexOf("查询成功") != -1) {
+                                window.location = "/releaseWorkDetail"
+                            }
+                        }
+                    }
+                })
+            })
+
             // 点击发布触发事件
             $("#createWork").click(function () {
                 if ($("#workTitle").val() == "" || $("#workContent").val() == "" || $("#repetitiveRate").val() == "") {
@@ -212,8 +231,8 @@
         <div class="gl fabuzuoyexiangqing">
             <div class="cx">
                 <div class="input-group">
-                    <input placeholder="输入作业名称查询" class="form-control right-ss"/>
-                    <span class="input-group-btn"><button class="btn btn-default right-ss">查询</button></span>
+                    <input placeholder="输入作业题目名称查询" class="form-control right-ss" id="searchWorkTitle"/>
+                    <span class="input-group-btn"><button class="btn btn-default right-ss" id="searchWork">查询</button></span>
                 </div>
             </div>
             <div>

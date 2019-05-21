@@ -74,13 +74,13 @@ public class CourseTeacherClazzController {
     public void getCourseTeacherClazzBySearch(@RequestBody GetCourseTeacherClazzBySearchRequest getCourseTeacherClazzBySearchRequest, HttpServletRequest request, HttpServletResponse response) {
         String searchCourseName = getCourseTeacherClazzBySearchRequest.getSearchCourseName();
         List<CourseDto> courseDtos = courseService.getBySearchCourseName(searchCourseName);
-        List<String> courseNames = courseDtos.stream()
-                .map(CourseDto::getCourseName)
+        List<Long> courseIds = courseDtos.stream()
+                .map(CourseDto::getCourseId)
                 .collect(Collectors.toList());
         TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
         List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherDto.getTeacherId());
         courseTeacherClazzDtos = courseTeacherClazzDtos.stream()
-                .filter(courseTeacherClazzDto -> courseNames.contains(courseTeacherClazzDto.getCourseName()))
+                .filter(courseTeacherClazzDto -> courseIds.contains(courseTeacherClazzDto.getCourseId()))
                 .collect(Collectors.toList());
         request.getServletContext().setAttribute("courseTeacherClazzDtos", courseTeacherClazzDtos);
         PrintWriterUtil.print("查询成功", response);

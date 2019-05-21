@@ -65,12 +65,12 @@ public class ClazzController {
     public void getClazzBySearch(@RequestBody GetClazzBySearchRequest getClazzBySearchRequest, HttpServletRequest request, HttpServletResponse response) {
         String searchClazzName = getClazzBySearchRequest.getSearchClazzName();
         List<ClazzDto> searchClazzDtos = clazzService.getBySearchClazzName(searchClazzName);
-        List<String> clazzNames = searchClazzDtos.stream()
-                .map(ClazzDto::getClazzName)
+        List<Long> clazzIds = searchClazzDtos.stream()
+                .map(ClazzDto::getClazzId)
                 .collect(Collectors.toList());
         List<ClazzDto> clazzDtos = clazzService.queryAllClazz();
         clazzDtos = clazzDtos.stream()
-                .filter(clazzDto -> clazzNames.contains(clazzDto.getClazzName()))
+                .filter(clazzDto -> clazzIds.contains(clazzDto.getClazzId()))
                 .collect(Collectors.toList());
         request.getServletContext().setAttribute("searchClazzDtos", clazzDtos);
         PrintWriterUtil.print("查询成功", response);

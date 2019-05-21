@@ -64,12 +64,12 @@ public class CourseController {
     public void getCourseBySearch(@RequestBody GetCourseBySearchRequest getCourseBySearchRequest, HttpServletRequest request, HttpServletResponse response) {
         String searchCourseName = getCourseBySearchRequest.getSearchCourseName();
         List<CourseDto> searchCourseDtos = courseService.getBySearchCourseName(searchCourseName);
-        List<String> courseNames = searchCourseDtos.stream()
-                .map(CourseDto::getCourseName)
+        List<Long> courseIds = searchCourseDtos.stream()
+                .map(CourseDto::getCourseId)
                 .collect(Collectors.toList());
         List<CourseDto> courseDtos = courseService.queryAllCourse();
         courseDtos = courseDtos.stream()
-                .filter(courseDto -> courseNames.contains(courseDto.getCourseName()))
+                .filter(courseDto -> courseIds.contains(courseDto.getCourseId()))
                 .collect(Collectors.toList());
         request.getServletContext().setAttribute("searchCourseDtos", courseDtos);
         PrintWriterUtil.print("查询成功", response);

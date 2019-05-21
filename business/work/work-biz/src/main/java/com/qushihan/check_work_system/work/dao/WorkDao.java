@@ -2,6 +2,7 @@ package com.qushihan.check_work_system.work.dao;
 
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -70,5 +71,21 @@ public class WorkDao {
         WorkExample.Criteria criteria = workExample.createCriteria();
         criteria.andWorkIdEqualTo(workId);
         return workMapper.updateByExampleSelective(work, workExample);
+    }
+
+    /**
+     * 通过作业题目名称搜索作业
+     *
+     * @param searchWorkTitle
+     * @return
+     */
+    public List<Work> getBySearchWorkTitle(String searchWorkTitle) {
+        WorkExample workExample = new WorkExample();
+        WorkExample.Criteria criteria = workExample.createCriteria();
+        if (StringUtils.isNotEmpty(searchWorkTitle)) {
+            criteria.andWorkTitleLike(searchWorkTitle + "%");
+        }
+        criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
+        return workMapper.selectByExample(workExample);
     }
 }

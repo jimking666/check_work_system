@@ -1,10 +1,12 @@
 package com.qushihan.check_work_system.app.controller.work;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.qushihan.check_work_system.work.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,10 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.qushihan.check_work_system.app.util.PrintWriterUtil;
 import com.qushihan.check_work_system.inf.util.TransitionUtil;
 import com.qushihan.check_work_system.work.api.WorkService;
-import com.qushihan.check_work_system.work.dto.CreateWorkRequest;
-import com.qushihan.check_work_system.work.dto.DeleteWorkRequest;
-import com.qushihan.check_work_system.work.dto.ReleaseWorkDetailRequest;
-import com.qushihan.check_work_system.work.dto.WorkDto;
 
 @RestController
 @RequestMapping("/work")
@@ -70,5 +68,28 @@ public class WorkController {
         Long workId = TransitionUtil.stringToLong(deleteWorkRequest.getWorkId());
         String deleteMessge = workService.deleteWork(workId);
         PrintWriterUtil.print(deleteMessge, response);
+    }
+
+    /**
+     * 通过作业题目名称查询作业
+     *
+     * @param getWorkBySearchRequest
+     * @param request
+     * @param response
+     */
+    @RequestMapping("/getWorkBySearch")
+    public void getWorkBySearch(@RequestBody GetWorkBySearchRequest getWorkBySearchRequest, HttpServletRequest request, HttpServletResponse response) {
+        String searchWorkTitle = getWorkBySearchRequest.getSearchWorkTitle();
+        List<WorkDto> searchWorkDtos = workService.getBySearchWorkTitle(searchWorkTitle);
+        List<Long> workIds = searchWorkDtos.stream()
+                .map(WorkDto::getWorkId)
+                .collect(Collectors.toList());
+        Long courseTeacherClazzId = (Long) request.getServletContext().getAttribute("courseTeacherClazzId");
+        List<WorkDto> workDtos = workService.queryWorkDtoListByCourseTeacherClazzId(courseTeacherClazzId);
+        workDtos = workDtos.stream()
+                .filter(workDto -> workIds.contains(workDto.getWorkId()))
+                .collect(Collectors.toList());
+        request.getServletContext().setAttribute("workDtos", workDtos);
+        PrintWriterUtil.print("查询成功", response);
     }
 }

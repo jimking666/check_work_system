@@ -58,6 +58,24 @@
             $("#closeSaveScoreWindow").click(function () {
                 $("#submitWorkScoreError").html("&nbsp&nbsp*")
             })
+            // 搜索提交作业
+            $("#searchSubmitWork").click(function () {
+                $.ajax({
+                    url: "/submitWork/getSubmitWorkBySearch",
+                    type: "post",
+                    data: JSON.stringify({
+                        "searchStudentName": $("#searchStudentName").val()
+                    }),
+                    contentType: "application/json;charset=utf-8",
+                    statusCode: {
+                        200: function (data) {
+                            if (data.indexOf("查询成功") != -1) {
+                                window.location = "/submitWorkDetail"
+                            }
+                        }
+                    }
+                })
+            })
         })
         // 回到发布作业详情页面
         function goBackReleaseWorkDetail(courseTeacherClazzId) {
@@ -174,8 +192,8 @@
         <div class="gl tijiaozuoyexiangqing">
             <div class="cx">
                 <div class="input-group">
-                    <input placeholder="输入提交作业名称查询" class="form-control right-ss"/>
-                    <span class="input-group-btn"><button class="btn btn-default right-ss">查询</button></span>
+                    <input placeholder="输入学生姓名查询" class="form-control right-ss" id="searchStudentName"/>
+                    <span class="input-group-btn"><button class="btn btn-default right-ss" id="searchSubmitWork">查询</button></span>
                 </div>
             </div>
             <div class="biao">

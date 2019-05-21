@@ -2,10 +2,14 @@ package com.qushihan.check_work_system.app.controller.submitwork;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.qushihan.check_work_system.student.api.StudentService;
+import com.qushihan.check_work_system.student.dto.StudentDto;
+import com.qushihan.check_work_system.submitwork.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,10 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.qushihan.check_work_system.app.util.PrintWriterUtil;
 import com.qushihan.check_work_system.inf.util.TransitionUtil;
 import com.qushihan.check_work_system.submitwork.api.SubmitWorkService;
-import com.qushihan.check_work_system.submitwork.dto.QuerySubmitWorkContentAndScoreRequest;
-import com.qushihan.check_work_system.submitwork.dto.SaveScoreRequest;
-import com.qushihan.check_work_system.submitwork.dto.SubmitWorkDetailRequest;
-import com.qushihan.check_work_system.submitwork.dto.SubmitWorkDto;
 
 @RestController
 @RequestMapping("/submitWork")
@@ -26,6 +26,9 @@ public class SubmitWorkController {
 
     @Autowired
     private SubmitWorkService submitWorkService;
+
+    @Autowired
+    private StudentService studentService;
 
     /**
      * 提交作业详情
@@ -72,5 +75,28 @@ public class SubmitWorkController {
             String saveScoreMessage = submitWorkService.saveScoreBySubmitWorkId(submitWorkId, score);
             PrintWriterUtil.print(saveScoreMessage, response);
         }
+    }
+
+    /**
+     * 通过学生名称查询作业提交
+     *
+     * @param getSubmitWorkBySearchRequest
+     * @param request
+     * @param response
+     */
+    @RequestMapping("/getSubmitWorkBySearch")
+    public void getSubmitWorkBySearch(@RequestBody GetSubmitWorkBySearchRequest getSubmitWorkBySearchRequest, HttpServletRequest request, HttpServletResponse response) {
+        String searchStudentName = getSubmitWorkBySearchRequest.getSearchStudentName();
+        List<StudentDto> studentDtos = studentService.getBySearchStudentName(searchStudentName);
+        List<Long> studentIds = studentDtos.stream()
+                .map(StudentDto::getStudentId)
+                .collect(Collectors.toList());
+        Long workId = (Long) request.getServletContext().getAttribute("workId");
+        List<SubmitWorkDto> submitWorkDtos = submitWorkService.querySubmitWorkDtoListByWorkId(workId);
+        submitWorkDtos = submitWorkDtos.stream()
+                .filter(submitWorkDto -> studentIds.contains(submitWorkDto.getStudentId()))
+                .collect(Collectors.toList());
+        request.getServletContext().setAttribute("submitWorkDtos", submitWorkDtos);
+        PrintWriterUtil.print("查询成功", response);
     }
 }

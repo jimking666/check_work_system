@@ -36,4 +36,11 @@ public interface WorkService {
      * @return
      */
     String deleteWork(Long workId);
+
+    /**
+     * 通过搜索作业题目名称获取作业
+     *
+     * @return
+     */
+    List<WorkDto> getBySearchWorkTitle(String searchWorkTitle);
 }

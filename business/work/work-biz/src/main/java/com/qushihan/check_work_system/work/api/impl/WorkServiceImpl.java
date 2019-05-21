@@ -69,4 +69,16 @@ public class WorkServiceImpl implements WorkService {
         workDao.updateWorkByWorkId(work, workId);
         return DeleteWorkStatus.DELETE_SUCCESS.getMessage();
     }
+
+    @Override
+    public List<WorkDto> getBySearchWorkTitle(String searchWorkTitle) {
+        List<Work> works = workDao.getBySearchWorkTitle(searchWorkTitle);
+        return works.stream()
+                .map(work -> {
+                    WorkDto workDto = new WorkDto();
+                    BeanUtils.copyProperties(work, workDto);
+                    return workDto;
+                })
+                .collect(Collectors.toList());
+    }
 }
