@@ -3,7 +3,7 @@ package com.qushihan.check_work_system.core.model.auto;
 import java.util.Date;
 
 public class ClazzStudent {
-    private Integer id;
+    private Long id;
 
     private Long clazzStudentId;
 
@@ -17,11 +17,11 @@ public class ClazzStudent {
 
     private Date updateTime;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qushihan.check_work_system.core.mapper.auto.ClazzStudentMapper">
   <resultMap id="BaseResultMap" type="com.qushihan.check_work_system.core.model.auto.ClazzStudent">
-    <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="id" jdbcType="BIGINT" property="id" />
     <result column="clazz_student_id" jdbcType="BIGINT" property="clazzStudentId" />
     <result column="clazz_id" jdbcType="BIGINT" property="clazzId" />
     <result column="student_id" jdbcType="BIGINT" property="studentId" />
@@ -85,15 +85,15 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from clazz_student
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from clazz_student
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
   </delete>
   <delete id="deleteByExample" parameterType="com.qushihan.check_work_system.core.model.auto.ClazzStudentExample">
     delete from clazz_student
@@ -105,7 +105,7 @@
     insert into clazz_student (id, clazz_student_id, clazz_id, 
       student_id, isdel, create_time, 
       update_time)
-    values (#{id,jdbcType=INTEGER}, #{clazzStudentId,jdbcType=BIGINT}, #{clazzId,jdbcType=BIGINT}, 
+    values (#{id,jdbcType=BIGINT}, #{clazzStudentId,jdbcType=BIGINT}, #{clazzId,jdbcType=BIGINT}, 
       #{studentId,jdbcType=BIGINT}, #{isdel,jdbcType=BIT}, #{createTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP})
   </insert>
@@ -136,7 +136,7 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
-        #{id,jdbcType=INTEGER},
+        #{id,jdbcType=BIGINT},
       </if>
       <if test="clazzStudentId != null">
         #{clazzStudentId,jdbcType=BIGINT},
@@ -168,7 +168,7 @@
     update clazz_student
     <set>
       <if test="record.id != null">
-        id = #{record.id,jdbcType=INTEGER},
+        id = #{record.id,jdbcType=BIGINT},
       </if>
       <if test="record.clazzStudentId != null">
         clazz_student_id = #{record.clazzStudentId,jdbcType=BIGINT},
@@ -195,7 +195,7 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update clazz_student
-    set id = #{record.id,jdbcType=INTEGER},
+    set id = #{record.id,jdbcType=BIGINT},
       clazz_student_id = #{record.clazzStudentId,jdbcType=BIGINT},
       clazz_id = #{record.clazzId,jdbcType=BIGINT},
       student_id = #{record.studentId,jdbcType=BIGINT},
@@ -228,7 +228,7 @@
         update_time = #{updateTime,jdbcType=TIMESTAMP},
       </if>
     </set>
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.qushihan.check_work_system.core.model.auto.ClazzStudent">
     update clazz_student
@@ -238,6 +238,6 @@
       isdel = #{isdel,jdbcType=BIT},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP}
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

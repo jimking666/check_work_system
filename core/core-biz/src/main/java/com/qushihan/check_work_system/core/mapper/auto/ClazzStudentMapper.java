@@ -10,7 +10,7 @@ public interface ClazzStudentMapper {
 
     int deleteByExample(ClazzStudentExample example);
 
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(Long id);
 
     int insert(ClazzStudent record);
 
@@ -18,7 +18,7 @@ public interface ClazzStudentMapper {
 
     List<ClazzStudent> selectByExample(ClazzStudentExample example);
 
-    ClazzStudent selectByPrimaryKey(Integer id);
+    ClazzStudent selectByPrimaryKey(Long id);
 
     int updateByExampleSelective(@Param("record") ClazzStudent record, @Param("example") ClazzStudentExample example);
 

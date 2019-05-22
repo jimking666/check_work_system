@@ -5,7 +5,7 @@
 <generatorConfiguration>
     <!-- 数据库驱动 -->
     <classPathEntry
-            location="/Users/bjhl/.m2/repository/mysql/mysql-connector-java/8.0.13/mysql-connector-java-8.0.13.jar"/>
+            location="C:\Users\Jimking\.m2\repository\mysql\mysql-connector-java\8.0.13\mysql-connector-java-8.0.13.jar"/>
     <context id="testTables" targetRuntime="MyBatis3">
         <!-- optional，旨在创建class时，对注释进行控制 -->
         <commentGenerator>
@@ -15,7 +15,7 @@
         </commentGenerator>
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://127.0.0.1:3306/work_submit_system?characterEncoding=UTF8"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/work_submit_system?characterEncoding=UTF8&amp;serverTimezone=UTC"
                         userId="root"
                         password="camishama123">
         </jdbcConnection>

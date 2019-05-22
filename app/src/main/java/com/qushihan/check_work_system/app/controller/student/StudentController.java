@@ -50,7 +50,7 @@ public class StudentController {
      * @param response
      */
     @RequestMapping("/getStudentBySearch")
-    public void getClazzBySearch(@RequestBody GetStudentBySearchRequest getStudentBySearchRequest, HttpServletRequest request, HttpServletResponse response) {
+    public void getStudentBySearch(@RequestBody GetStudentBySearchRequest getStudentBySearchRequest, HttpServletRequest request, HttpServletResponse response) {
         String searchStudntName = getStudentBySearchRequest.getSearchStudentName();
         List<StudentDto> studentDtosForSearch = studentService.getBySearchStudentName(searchStudntName);
         List<Long> studentIds = studentDtosForSearch.stream()
