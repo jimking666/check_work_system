@@ -78,22 +78,32 @@
                     <a class="btn btn-default" href="/">请您先去登陆!</a>
                 </#if>
             </p>
-            <p>
-                <#if teacherDto??>
-                    <button class="btn btn-danger" id="logout">退出登陆</button>
-                </#if>
-            </p>
         </div>
-        <div class="meun-title">教师操作</div>
+        <div class="meun-title">当前页面</div>
         <div class="meun-item meun-item-active" id="xsxq">学生详情</div>
+        <div class="meun-title">教师操作</div>
+        <#if teacherDto??>
+            <div class="meun-item">
+                <button class="btn btn-primary" id="goBackClazzManagement">
+                    主页面
+                </button>
+            </div>
+            <div class="meun-title">
+                <button class="btn btn-danger" data-toggle="modal" data-target="#tuichudenglu">
+                    退出登陆
+                </button>
+            </div>
+        </#if>
     </div>
     <div id="rightContent">
         <!--学生详情-->
         <div class="gl xueshengxiangqing">
             <div class="cx">
                 <div class="input-group">
-                    <input placeholder="输入学生名查询" class="form-control right-ss" id="searchStudentName"/>
-                    <span class="input-group-btn"><button class="btn btn-default right-ss" id="searchStudent">查询</button></span>
+                    <#if teacherDto??>
+                        <input placeholder="输入学生名查询" class="form-control right-ss" id="searchStudentName"/>
+                        <span class="input-group-btn"><button class="btn btn-default right-ss" id="searchStudent">查询</button></span>
+                    </#if>
                 </div>
             </div>
             <div class="biao">
@@ -126,12 +136,33 @@
                     </tbody>
                 </table>
             </div>
-            <div class="dao">
-                <nav aria-label="Page navigation">
-                    <button class="btn btn-primary" id="goBackClazzManagement">
-                        主页面
-                    </button>
-                </nav>
+        </div>
+
+    <#--退出登录-->
+        <div class="modal fade" id="tuichudenglu" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">警告</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>确 定 退 出 登 录 ？</p>
+                    </div>
+                    <form>
+                        <input type="hidden" name="studentId" id="studentId">
+                    </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            取消
+                        </button>
+                        <button type="button" class="btn btn-danger" id="logout">
+                            确定退出
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -97,5 +97,16 @@ public class TeacherController {
     @GetMapping("/logout")
     public void logoutTeacher(HttpServletRequest request, HttpServletResponse response) {
         request.getServletContext().removeAttribute("teacherDto");
+        request.getServletContext().removeAttribute("courseTeacherClazzDtos");
+        request.getServletContext().removeAttribute("courseDtos");
+        request.getServletContext().removeAttribute("searchCourseDtos");
+        request.getServletContext().removeAttribute("clazzDtos");
+        request.getServletContext().removeAttribute("searchClazzDtos");
+        request.getServletContext().removeAttribute("studentDtos");
+        request.getServletContext().removeAttribute("clazzIdForStudent");
+        request.getServletContext().removeAttribute("submitWorkDtos");
+        request.getServletContext().removeAttribute("workId");
+        request.getServletContext().removeAttribute("workDtos");
+        request.getServletContext().removeAttribute("courseTeacherClazzId");
     }
 }

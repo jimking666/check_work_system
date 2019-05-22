@@ -41,11 +41,13 @@ public class CourseTeacherClazzController {
      */
     @PostMapping("/create")
     public void createCourseTeacherClazz(@RequestBody CreateCourseTeacherClazzRequest createCourseTeacherClazzRequest,
-            HttpServletResponse response) {
+            HttpServletResponse response, HttpServletRequest request) {
         Long courseId = TransitionUtil.stringToLong(createCourseTeacherClazzRequest.getCourseId());
         Long teacherId = TransitionUtil.stringToLong(createCourseTeacherClazzRequest.getTeacherId());
         Long clazzId = TransitionUtil.stringToLong(createCourseTeacherClazzRequest.getClazzId());
         String createMessage = courseTeacherClazzService.createCourseTeacherClazz(courseId, teacherId, clazzId);
+        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherId);
+        request.getServletContext().setAttribute("courseTeacherClazzDtos", courseTeacherClazzDtos);
         PrintWriterUtil.print(createMessage, response);
     }
 

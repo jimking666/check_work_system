@@ -354,16 +354,35 @@
                     <a class="btn btn-default" href="/">请您先去登陆!</a>
                 </#if>
             </p>
-            <p>
-                <#if teacherDto??>
-                    <button class="btn btn-danger" id="logout">退出登陆</button>
-                </#if>
-            </p>
         </div>
-        <div class="meun-title">教师操作</div>
+        <div class="meun-title">当前页面</div>
         <div class="meun-item" id="zygl">作业管理</div>
         <div class="meun-item" id="kcgl">课程管理</div>
         <div class="meun-item meun-item-active" id="bjgl">班级管理</div>
+        <div class="meun-title">教师操作</div>
+        <#if teacherDto??>
+            <div class="meun-title">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#chuangjiankechengjiaoshibanji"
+                        onclick="addTeacherId('${teacherDto.teacherId}')">
+                    创建课程教师班级
+                </button>
+            </div>
+            <div class="meun-title">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#chuangjiankecheng">
+                    创建课程
+                </button>
+            </div>
+            <div class="meun-title">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#chuangjianbanji">
+                    创建班级
+                </button>
+            </div>
+            <div class="meun-title">
+                <button class="btn btn-danger" data-toggle="modal" data-target="#tuichudenglu">
+                    退出登陆
+                </button>
+            </div>
+        </#if>
     </div>
 
     <div id="rightContent">
@@ -371,15 +390,11 @@
         <div class="gl zuoyeguanli" style="display:none">
             <div class="cx">
                 <div class="input-group">
-                    <input placeholder="输入课程名查询" class="form-control right-ss" id="searchCourseName"/>
-                    <span class="input-group-btn"><button class="btn btn-default right-ss" id="searchCourseTeacherClazz">查询</button></span>
+                    <#if teacherDto??>
+                        <input placeholder="输入课程名查询" class="form-control right-ss" id="searchCourseName"/>
+                        <span class="input-group-btn"><button class="btn btn-default right-ss" id="searchCourseTeacherClazz">查询</button></span>
+                    </#if>
                 </div>
-            </div>
-            <div>
-                <#if teacherDto??>
-                    <a href="#" data-toggle="modal" data-target="#chuangjiankechengjiaoshibanji"
-                       onclick="addTeacherId('${teacherDto.teacherId}')">创建课程教师班级</a>
-                </#if>
             </div>
             <div class="biao">
                 <table class="table table-striped table-hover">
@@ -432,65 +447,6 @@
                     </tbody>
                 </table>
             </div>
-        <#--创建课程教师班级-->
-            <div class="modal fade" id="chuangjiankechengjiaoshibanji" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="main">
-                            <h3 class="page-title">创建课程教师班级</h3>
-                        <#--创建课程教师班级表单-->
-                            <form>
-                                <div class="form-container">
-                                    <div class="form-group">
-                                        课程选择
-                                        <select class="form-control" id="courseId2" name="courseId2">
-                                            <#if courseDtos??>
-                                                <option></option>
-                                                <#list courseDtos as courseDto>
-                                                    <option value="${courseDto.courseId}">
-                                                        ${courseDto.courseName}
-                                                    </option>
-                                                </#list>
-                                            </#if>
-                                        </select>
-                                        <span id="courseId2Error" style="color: red">&nbsp&nbsp*</span>
-                                    </div>
-                                    <div class="form-group">
-                                        班级选择
-                                        <select class="form-control" id="clazzId2" name="clazzId2">
-                                            <#if clazzDtos??>
-                                                <option></option>
-                                                <#list clazzDtos as clazzDto>
-                                                    <option value="${clazzDto.clazzId}">
-                                                        ${clazzDto.clazzName}
-                                                    </option>
-                                                </#list>
-                                            </#if>
-                                        </select>
-                                        <span id="clazzId2Error" style="color: red">&nbsp&nbsp*</span>
-                                    </div>
-
-                                    <input type="hidden" name="teacherId" id="teacherId"/>
-                                </div>
-                            </form>
-                        <#--将创建按钮放在表单外，若不这样不能通过js阻塞表单提交-->
-                            <div class="form-container">
-                                <div class="form-group">
-                                    <button class="btn btn-primary btn-block form-container"
-                                            id="createCourseTeacherClazz">创建
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal"
-                                        id="closeCreateCourseTeacherClazzWindow">
-                                    关闭
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         <#--删除课程教师班级-->
             <div class="modal fade" id="shanchukechengjiaoshibanji" role="dialog" aria-labelledby="myModalLabel">
@@ -525,14 +481,11 @@
         <div class="gl kechengguanli" style="display:none">
             <div class="cx">
                 <div class="input-group">
-                    <input placeholder="输入课程名查询" class="form-control right-ss" id="searchCourseName1"/>
-                    <span class="input-group-btn"><button class="btn btn-default right-ss" id="searchCourse">查询</button></span>
+                    <#if teacherDto??>
+                        <input placeholder="输入课程名查询" class="form-control right-ss" id="searchCourseName1"/>
+                        <span class="input-group-btn"><button class="btn btn-default right-ss" id="searchCourse">查询</button></span>
+                    </#if>
                 </div>
-            </div>
-            <div>
-                <#if teacherDto??>
-                    <a href="#" data-toggle="modal" data-target="#chuangjiankecheng">创建课程</a>
-                </#if>
             </div>
             <div class="biao">
                 <table class="table table-striped table-hover">
@@ -574,39 +527,6 @@
                     </tbody>
                 </table>
             </div>
-        <#--创建课程-->
-            <div class="modal fade" id="chuangjiankecheng" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="main">
-                            <h3 class="page-title">创建课程</h3>
-                        <#--创建课程表单-->
-                            <form>
-                                <div class="form-container">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="课 程 名 称" name="courseName"
-                                               id="courseName"/>
-                                        <span id="courseNameError" style="color: red">&nbsp&nbsp*</span>
-                                    </div>
-                                </div>
-                            </form>
-                        <#--将创建按钮放在表单外，若不这样不能通过js阻塞表单提交-->
-                            <div class="form-container">
-                                <div class="form-group">
-                                    <button class="btn btn-primary btn-block form-container" id="createCourse">创建
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal"
-                                        id="closeCreateCourseWindow">
-                                    关闭
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     <#--删除课程-->
         <div class="modal fade" id="shanchukecheng" role="dialog" aria-labelledby="myModalLabel">
@@ -640,14 +560,11 @@
         <div class="gl banjiguanli">
             <div class="cx">
                 <div class="input-group">
-                    <input placeholder="输入班级名查询" class="form-control right-ss" id="searchClazzName"/>
-                    <span class="input-group-btn"><button class="btn btn-default right-ss" id="searchClazz">查询</button></span>
+                    <#if teacherDto??>
+                        <input placeholder="输入班级名查询" class="form-control right-ss" id="searchClazzName"/>
+                        <span class="input-group-btn"><button class="btn btn-default right-ss" id="searchClazz">查询</button></span>
+                    </#if>
                 </div>
-            </div>
-            <div>
-                <#if teacherDto??>
-                    <a href="#" data-toggle="modal" data-target="#chuangjianbanji">创建班级</a>
-                </#if>
             </div>
             <div class="biao">
                 <table class="table table-striped table-hover">
@@ -695,40 +612,6 @@
                     </tbody>
                 </table>
             </div>
-        <#--创建班级-->
-            <div class="modal fade" id="chuangjianbanji" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="main">
-                            <h3 class="page-title">创建班级</h3>
-                        <#--创建班级表单-->
-                            <form>
-                                <div class="form-container">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="班 级 名 称" name="clazzName"
-                                               id="clazzName"/>
-                                        <span id="clazzNameError" style="color: red">&nbsp&nbsp*</span>
-                                    </div>
-                                </div>
-                            </form>
-                        <#--将创建按钮放在表单外，若不这样不能通过js阻塞表单提交-->
-                            <div class="form-container">
-                                <div class="form-group">
-                                    <button class="btn btn-primary btn-block form-container"
-                                            id="createClazz">创建
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal"
-                                        id="closeCreateClazzWindow">
-                                    关闭
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         <#--删除班级-->
             <div class="modal fade" id="shanchubanji" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog">
@@ -751,6 +634,163 @@
                             </button>
                             <button type="button" class="btn btn-danger" id="deleteClazz">
                                 删除
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <#--退出登录-->
+        <div class="modal fade" id="tuichudenglu" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">警告</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>确 定 退 出 登 录 ？</p>
+                    </div>
+                    <form>
+                        <input type="hidden" name="studentId" id="studentId">
+                    </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            取消
+                        </button>
+                        <button type="button" class="btn btn-danger" id="logout">
+                            确定退出
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <#--创建课程教师班级-->
+        <div class="modal fade" id="chuangjiankechengjiaoshibanji" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="main">
+                        <h3 class="page-title">创建课程教师班级</h3>
+                    <#--创建课程教师班级表单-->
+                        <form>
+                            <div class="form-container">
+                                <div class="form-group">
+                                    课程选择
+                                    <select class="form-control" id="courseId2" name="courseId2">
+                                            <#if courseDtos??>
+                                                <option></option>
+                                                <#list courseDtos as courseDto>
+                                                    <option value="${courseDto.courseId}">
+                                                        ${courseDto.courseName}
+                                                    </option>
+                                                </#list>
+                                            </#if>
+                                    </select>
+                                    <span id="courseId2Error" style="color: red">&nbsp&nbsp*</span>
+                                </div>
+                                <div class="form-group">
+                                    班级选择
+                                    <select class="form-control" id="clazzId2" name="clazzId2">
+                                            <#if clazzDtos??>
+                                                <option></option>
+                                                <#list clazzDtos as clazzDto>
+                                                    <option value="${clazzDto.clazzId}">
+                                                        ${clazzDto.clazzName}
+                                                    </option>
+                                                </#list>
+                                            </#if>
+                                    </select>
+                                    <span id="clazzId2Error" style="color: red">&nbsp&nbsp*</span>
+                                </div>
+
+                                <input type="hidden" name="teacherId" id="teacherId"/>
+                            </div>
+                        </form>
+                    <#--将创建按钮放在表单外，若不这样不能通过js阻塞表单提交-->
+                        <div class="form-container">
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block form-container"
+                                        id="createCourseTeacherClazz">创建
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"
+                                    id="closeCreateCourseTeacherClazzWindow">
+                                关闭
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <#--创建课程-->
+        <div class="modal fade" id="chuangjiankecheng" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="main">
+                        <h3 class="page-title">创建课程</h3>
+                    <#--创建课程表单-->
+                        <form>
+                            <div class="form-container">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="课 程 名 称" name="courseName"
+                                           id="courseName"/>
+                                    <span id="courseNameError" style="color: red">&nbsp&nbsp*</span>
+                                </div>
+                            </div>
+                        </form>
+                    <#--将创建按钮放在表单外，若不这样不能通过js阻塞表单提交-->
+                        <div class="form-container">
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block form-container" id="createCourse">创建
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"
+                                    id="closeCreateCourseWindow">
+                                关闭
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <#--创建班级-->
+        <div class="modal fade" id="chuangjianbanji" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="main">
+                        <h3 class="page-title">创建班级</h3>
+                    <#--创建班级表单-->
+                        <form>
+                            <div class="form-container">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="班 级 名 称" name="clazzName"
+                                           id="clazzName"/>
+                                    <span id="clazzNameError" style="color: red">&nbsp&nbsp*</span>
+                                </div>
+                            </div>
+                        </form>
+                    <#--将创建按钮放在表单外，若不这样不能通过js阻塞表单提交-->
+                        <div class="form-container">
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block form-container"
+                                        id="createClazz">创建
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"
+                                    id="closeCreateClazzWindow">
+                                关闭
                             </button>
                         </div>
                     </div>
