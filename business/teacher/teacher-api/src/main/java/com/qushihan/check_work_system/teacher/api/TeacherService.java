@@ -1,28 +1,30 @@
 package com.qushihan.check_work_system.teacher.api;
 
-import com.qushihan.check_work_system.teacher.dto.LoginTeacherRequest;
-import com.qushihan.check_work_system.teacher.dto.RegisterTeacherRequest;
 import com.qushihan.check_work_system.teacher.dto.TeacherDto;
+
+import java.util.List;
 
 public interface TeacherService {
 
     /**
      * 教师注册
      *
-     * @param registerTeacherRequest
-     *
+     * @param teacherNumber
+     * @param teacherPassword
+     * @param teacherName
      * @return
      */
-    String registerTeacher(RegisterTeacherRequest registerTeacherRequest);
+    String registerTeacher(String teacherNumber, String teacherPassword, String teacherName);
 
     /**
      * 教师登陆
      *
-     * @param loginTeacherRequest
+     * @param teacherNumber
+     * @param teacherPassword
      *
      * @return
      */
-    TeacherDto loginTeacher(LoginTeacherRequest loginTeacherRequest);
+    List<TeacherDto> loginTeacher(String teacherNumber, String teacherPassword);
 
     /**
      * 通过教师id查询教师dto

@@ -4,9 +4,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.qushihan.check_work_system.inf.util.GetIdUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import com.qushihan.check_work_system.core.api.CourseTeacherClazzService;
@@ -17,7 +19,6 @@ import com.qushihan.check_work_system.work.dto.WorkDto;
 import com.qushihan.check_work_system.work.enums.CreateWorkStatus;
 import com.qushihan.check_work_system.work.enums.DeleteWorkStatus;
 import com.qushihan.check_work_system.work.model.auto.Work;
-import com.qushihan.check_work_system.work.util.WorkUtil;
 
 @Service
 public class WorkServiceImpl implements WorkService {
@@ -43,13 +44,14 @@ public class WorkServiceImpl implements WorkService {
     }
 
     @Override
+    @Transactional(rollbackFor = RuntimeException.class)
     public String createWork(String workTitle, String workContent, Float repetitiveRate, Long courseTeacherClazzId) {
         // 先查重复
         if (!CollectionUtils.isEmpty(workDao.queryWorkListByWorkTitleAndWorkContent(workTitle, workContent))) {
             return CreateWorkStatus.REPEAT_CREATE_FAIL.getMessage();
         }
         // 若不重复则插入
-        Long workId = WorkUtil.getWorkId();
+        Long workId = GetIdUtil.getId();
         Work work = new Work();
         work.setWorkId(workId);
         work.setWorkTitle(workTitle);

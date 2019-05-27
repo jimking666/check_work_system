@@ -45,10 +45,6 @@
                             200: function (data) {
                                 if (data.indexOf("登陆成功") != -1) {
                                     window.location = "/workManagement"
-                                } else if (data.indexOf("账号禁用") != -1) {
-                                    $("#teacherNumber").val("")
-                                    $("#teacherPassword").val("")
-                                    alert(data)
                                 } else if (data.indexOf("账号或密码错误") != -1) {
                                     $("#teacherNumber").val("")
                                     $("#teacherPassword").val("")

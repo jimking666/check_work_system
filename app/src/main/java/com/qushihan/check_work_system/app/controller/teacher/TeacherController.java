@@ -10,6 +10,7 @@ import com.qushihan.check_work_system.core.dto.CourseTeacherClazzDto;
 import com.qushihan.check_work_system.course.api.CourseService;
 import com.qushihan.check_work_system.course.dto.CourseDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -50,7 +51,10 @@ public class TeacherController {
     @PostMapping("/register")
     public void registerTeacher(@RequestBody RegisterTeacherRequest registerTeacherRequest,
             HttpServletResponse response) {
-        String registerMessge = teacherService.registerTeacher(registerTeacherRequest);
+        String teacherNumber = registerTeacherRequest.getTeacherNumber();
+        String teacherPassword = registerTeacherRequest.getTeacherPassword();
+        String teacherName = registerTeacherRequest.getTeacherName();
+        String registerMessge = teacherService.registerTeacher(teacherNumber, teacherPassword, teacherName);
         PrintWriterUtil.print(registerMessge, response);
     }
 
@@ -64,13 +68,16 @@ public class TeacherController {
     @PostMapping("/login")
     public void loginTeacher(@RequestBody LoginTeacherRequest loginTeacherRequest, HttpServletRequest request,
             HttpServletResponse response) {
-        TeacherDto teacherDto = teacherService.loginTeacher(loginTeacherRequest);
-        String loginMessage = JudgeLoginStatus.UNKNOW.getMessage();
-        if (teacherDto == null) {
+        String teacherNumber = loginTeacherRequest.getTeacherNumber();
+        String teacherPassword = loginTeacherRequest.getTeacherPassword();
+        List<TeacherDto> teacherDtos = teacherService.loginTeacher(teacherNumber, teacherPassword);
+        String loginMessage = "";
+        if (CollectionUtils.isEmpty(teacherDtos)) {
             loginMessage = JudgeLoginStatus.NUMBER_OR_PASSWORD_ERROR.getMessage();
-        } else if (teacherDto.getIsdel()) {
-            loginMessage = JudgeLoginStatus.ACCOUNT_DISABLED.getMessage();
         } else {
+            TeacherDto teacherDto = teacherDtos.stream()
+                    .findFirst()
+                    .orElse(new TeacherDto());
             loginMessage = JudgeLoginStatus.LOGIN_SUCCESS.getMessage();
             List<CourseDto> courseDtos = courseService.queryAllCourse();
             List<ClazzDto> clazzDtos = clazzService.queryAllClazz();

@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.qushihan.check_work_system.teacher.model.auto.Teacher">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="teacher_id" jdbcType="BIGINT" property="teacherId" />
-    <result column="teacher_number" jdbcType="BIGINT" property="teacherNumber" />
+    <result column="teacher_number" jdbcType="VARCHAR" property="teacherNumber" />
     <result column="teacher_password" jdbcType="VARCHAR" property="teacherPassword" />
     <result column="teacher_name" jdbcType="VARCHAR" property="teacherName" />
     <result column="isdel" jdbcType="BIT" property="isdel" />
@@ -107,7 +107,7 @@
     insert into teacher (id, teacher_id, teacher_number, 
       teacher_password, teacher_name, isdel, 
       create_time, update_time)
-    values (#{id,jdbcType=BIGINT}, #{teacherId,jdbcType=BIGINT}, #{teacherNumber,jdbcType=BIGINT}, 
+    values (#{id,jdbcType=BIGINT}, #{teacherId,jdbcType=BIGINT}, #{teacherNumber,jdbcType=VARCHAR}, 
       #{teacherPassword,jdbcType=VARCHAR}, #{teacherName,jdbcType=VARCHAR}, #{isdel,jdbcType=BIT}, 
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
   </insert>
@@ -147,7 +147,7 @@
         #{teacherId,jdbcType=BIGINT},
       </if>
       <if test="teacherNumber != null">
-        #{teacherNumber,jdbcType=BIGINT},
+        #{teacherNumber,jdbcType=VARCHAR},
       </if>
       <if test="teacherPassword != null">
         #{teacherPassword,jdbcType=VARCHAR},
@@ -182,7 +182,7 @@
         teacher_id = #{record.teacherId,jdbcType=BIGINT},
       </if>
       <if test="record.teacherNumber != null">
-        teacher_number = #{record.teacherNumber,jdbcType=BIGINT},
+        teacher_number = #{record.teacherNumber,jdbcType=VARCHAR},
       </if>
       <if test="record.teacherPassword != null">
         teacher_password = #{record.teacherPassword,jdbcType=VARCHAR},
@@ -208,7 +208,7 @@
     update teacher
     set id = #{record.id,jdbcType=BIGINT},
       teacher_id = #{record.teacherId,jdbcType=BIGINT},
-      teacher_number = #{record.teacherNumber,jdbcType=BIGINT},
+      teacher_number = #{record.teacherNumber,jdbcType=VARCHAR},
       teacher_password = #{record.teacherPassword,jdbcType=VARCHAR},
       teacher_name = #{record.teacherName,jdbcType=VARCHAR},
       isdel = #{record.isdel,jdbcType=BIT},
@@ -225,7 +225,7 @@
         teacher_id = #{teacherId,jdbcType=BIGINT},
       </if>
       <if test="teacherNumber != null">
-        teacher_number = #{teacherNumber,jdbcType=BIGINT},
+        teacher_number = #{teacherNumber,jdbcType=VARCHAR},
       </if>
       <if test="teacherPassword != null">
         teacher_password = #{teacherPassword,jdbcType=VARCHAR},
@@ -248,7 +248,7 @@
   <update id="updateByPrimaryKey" parameterType="com.qushihan.check_work_system.teacher.model.auto.Teacher">
     update teacher
     set teacher_id = #{teacherId,jdbcType=BIGINT},
-      teacher_number = #{teacherNumber,jdbcType=BIGINT},
+      teacher_number = #{teacherNumber,jdbcType=VARCHAR},
       teacher_password = #{teacherPassword,jdbcType=VARCHAR},
       teacher_name = #{teacherName,jdbcType=VARCHAR},
       isdel = #{isdel,jdbcType=BIT},

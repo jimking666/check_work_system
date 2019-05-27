@@ -11,7 +11,7 @@ public class RegisterTeacherRequest {
     /**
      * 教师编号
      */
-    private Long teacherNumber;
+    private String teacherNumber;
 
     /**
      * 教师密码

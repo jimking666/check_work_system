@@ -11,6 +11,8 @@ import com.qushihan.check_work_system.inf.enums.FieldIsdelStatus;
 import com.qushihan.check_work_system.teacher.mapper.auto.TeacherMapper;
 import com.qushihan.check_work_system.teacher.model.auto.Teacher;
 import com.qushihan.check_work_system.teacher.model.auto.TeacherExample;
+import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 
 @Repository
 public class TeacherDao {
@@ -25,7 +27,10 @@ public class TeacherDao {
      *
      * @return
      */
-    public Integer registerTeacher(Teacher teacher) {
+    public int registerTeacher(Teacher teacher) {
+        if (!Optional.ofNullable(teacher).isPresent()) {
+            return 0;
+        }
         return teacherMapper.insertSelective(teacher);
     }
 
@@ -37,11 +42,18 @@ public class TeacherDao {
      *
      * @return
      */
-    public List<Teacher> selectByTeacherNumberAndteacherPassword(Long teacherNumber, String teacherPassword) {
+    public List<Teacher> getByTeacherNumberAndTeacherPassword(String teacherNumber, String teacherPassword) {
+        if (StringUtils.isEmpty(teacherNumber)) {
+            return Collections.emptyList();
+        }
+        if (StringUtils.isEmpty(teacherPassword)) {
+            return Collections.emptyList();
+        }
         TeacherExample teacherExample = new TeacherExample();
         TeacherExample.Criteria criteria = teacherExample.createCriteria();
         criteria.andTeacherNumberEqualTo(teacherNumber);
         criteria.andTeacherPasswordEqualTo(teacherPassword);
+        criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
         return teacherMapper.selectByExample(teacherExample);
     }
 
@@ -52,10 +64,14 @@ public class TeacherDao {
      *
      * @return
      */
-    public List<Teacher> judgeRepeatRegister(Long teacherNumber) {
+    public List<Teacher> judgeRepeatRegister(String teacherNumber) {
+        if (StringUtils.isEmpty(teacherNumber)) {
+            return Collections.emptyList();
+        }
         TeacherExample teacherExample = new TeacherExample();
         TeacherExample.Criteria criteria = teacherExample.createCriteria();
         criteria.andTeacherNumberEqualTo(teacherNumber);
+        criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
         return teacherMapper.selectByExample(teacherExample);
     }
 

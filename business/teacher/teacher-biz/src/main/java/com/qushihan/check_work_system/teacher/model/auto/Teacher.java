@@ -7,7 +7,7 @@ public class Teacher {
 
     private Long teacherId;
 
-    private Long teacherNumber;
+    private String teacherNumber;
 
     private String teacherPassword;
 
@@ -35,12 +35,12 @@ public class Teacher {
         this.teacherId = teacherId;
     }
 
-    public Long getTeacherNumber() {
+    public String getTeacherNumber() {
         return teacherNumber;
     }
 
-    public void setTeacherNumber(Long teacherNumber) {
-        this.teacherNumber = teacherNumber;
+    public void setTeacherNumber(String teacherNumber) {
+        this.teacherNumber = teacherNumber == null ? null : teacherNumber.trim();
     }
 
     public String getTeacherPassword() {

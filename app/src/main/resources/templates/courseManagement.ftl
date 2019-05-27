@@ -499,7 +499,7 @@
                     <tr>
                         <th>课程id</th>
                         <th>课程名称</th>
-                        <th>创建时间</th>
+                        <th>创建日期</th>
                         <#if teacherDto??>
                             <th>操作</th>
                         </#if>
