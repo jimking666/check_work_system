@@ -3,37 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a0a978ed-af39-4987-8c2a-a260de65e57a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/teacher/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/teacher/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/clazzManagement.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/clazzManagement.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/courseManagement.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/courseManagement.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/login.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/workManagement.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/workManagement.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/api/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/api/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/dto/LoginTeacherRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/dto/LoginTeacherRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/dto/RegisterTeacherRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/dto/RegisterTeacherRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/enums/JudgeLoginStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/enums/JudgeLoginStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-api/target/classes/com/qushihan/check_work_system/teacher/api/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-api/target/classes/com/qushihan/check_work_system/teacher/api/TeacherService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-api/target/classes/com/qushihan/check_work_system/teacher/dto/LoginTeacherRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-api/target/classes/com/qushihan/check_work_system/teacher/dto/LoginTeacherRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-api/target/classes/com/qushihan/check_work_system/teacher/dto/RegisterTeacherRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-api/target/classes/com/qushihan/check_work_system/teacher/dto/RegisterTeacherRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-api/target/classes/com/qushihan/check_work_system/teacher/enums/JudgeLoginStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-api/target/classes/com/qushihan/check_work_system/teacher/enums/JudgeLoginStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/api/impl/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/api/impl/TeacherServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/dao/TeacherDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/dao/TeacherDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/mapper/auto/TeacherMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/model/auto/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/model/auto/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/model/auto/TeacherExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/model/auto/TeacherExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/util/TeacherUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/util/TeacherUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/api/impl/TeacherServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/api/impl/TeacherServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/dao/TeacherDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/dao/TeacherDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/mapper/auto/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/mapper/auto/TeacherMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/model/auto/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/model/auto/Teacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/model/auto/TeacherExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/model/auto/TeacherExample$Criteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/model/auto/TeacherExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/model/auto/TeacherExample$Criterion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/model/auto/TeacherExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/model/auto/TeacherExample$GeneratedCriteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/util/TeacherUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/teacher/teacher-biz/target/classes/com/qushihan/check_work_system/teacher/util/TeacherUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/util/WorkUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/util/WorkUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/business/work/work-biz/target/classes/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/work/work-biz/target/classes/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/work/work-biz/target/classes/com/qushihan/check_work_system/work/util/WorkUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/work/work-biz/target/classes/com/qushihan/check_work_system/work/util/WorkUtil.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/app/target/" />
@@ -68,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/submitwork/SubmitWorkController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
+            <state relative-caret-position="433">
+              <caret line="54" column="49" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -86,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/login.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+            <state relative-caret-position="312">
+              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -1240,17 +1210,21 @@
       <workItem from="1558676521642" duration="1547000" />
       <workItem from="1558760369434" duration="2392000" />
       <workItem from="1558839567040" duration="8775000" />
-      <workItem from="1558924413921" duration="754000" />
+      <workItem from="1558924413921" duration="2590000" />
+      <workItem from="1559199350827" duration="1838000" />
+      <workItem from="1559294706371" duration="1248000" />
+      <workItem from="1559379650393" duration="634000" />
+      <workItem from="1559657710875" duration="658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="291157000" />
+    <option name="totallyTimeSpent" value="297371000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1721" height="695" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31836462" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20685509" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1261,7 +1235,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.42547032" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4196816" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41788322" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1583,8 +1557,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/submitwork/SubmitWorkController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
+        <state relative-caret-position="433">
+          <caret line="54" column="49" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -1592,6 +1566,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2952">
           <caret line="123" column="13" selection-start-line="123" selection-start-column="13" selection-end-line="126" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/login.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1647,13 +1628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1632">
           <caret line="68" column="26" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/login.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
         </state>
       </provider>
     </entry>
