@@ -44,7 +44,7 @@ public class CourseServiceImpl implements CourseService {
     public List<CourseDto> queryAllCourse() {
         List<Course> courses = courseDao.queryAllCourse();
         if (CollectionUtils.isEmpty(courses)) {
-            return Collections.EMPTY_LIST;
+            return Collections.emptyList();
         }
         List<CourseDto> courseDtos = courses.stream().map(course -> {
             CourseDto courseDto = new CourseDto();

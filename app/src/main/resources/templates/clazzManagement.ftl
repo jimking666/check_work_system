@@ -161,6 +161,8 @@
             $("#createCourse").click(function () {
                 if ($("#courseName").val() == "") {
                     $("#courseNameError").html("&nbsp&nbsp课 程 名 称 不 能 为 空 !")
+                } else if ($("#courseName").val().length > 10) {
+                    $("#courseNameError").html("&nbsp&nbsp课 程 名 称 最 大 长 度 限 制 为 10 !")
                 } else {
                     $.ajax({
                         url: "/course/create",

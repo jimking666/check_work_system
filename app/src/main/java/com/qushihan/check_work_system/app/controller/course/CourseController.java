@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.qushihan.check_work_system.course.dto.CourseDto;
 import com.qushihan.check_work_system.course.dto.GetCourseBySearchRequest;
+import com.qushihan.check_work_system.course.enums.CreateCourseStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,9 +35,14 @@ public class CourseController {
      * @param response
      */
     @PostMapping("/create")
-    public void createCourse(@RequestBody CreateCourseRequest createCourseRequest, HttpServletResponse response) {
+    public void createCourse(@RequestBody CreateCourseRequest createCourseRequest, HttpServletRequest request, HttpServletResponse response) {
         String courseName = createCourseRequest.getCourseName();
         String createMessge = courseService.createCourse(courseName);
+        if (createMessge.equals(CreateCourseStatus.CREATE_SUCCESS.getMessage())) {
+            List<CourseDto> courseDtos = courseService.queryAllCourse();
+            request.getServletContext().setAttribute("courseDtos", courseDtos);
+            request.getServletContext().setAttribute("searchCourseDtos", courseDtos);
+        }
         PrintWriterUtil.print(createMessge, response);
     }
 

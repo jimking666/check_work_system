@@ -90,13 +90,13 @@
                 } else if ($("#workTitle").val().length > 20 || $("#workContent").val().length > 200) {
                     // 若作业题目长度大于20
                     if ($("#workTitle").val().length > 20) {
-                        $("#workTitleError").html("&nbsp&nbsp&nbsp&nbsp作 业 题 目 长 度 最 大 限 制 为 20 !")
+                        $("#workTitleError").html("&nbsp&nbsp&nbsp&nbsp作 业 题 目 最 大 长 度 限 制 为 20 !")
                     } else {
                         $("#workTitleError").html("&nbsp&nbsp&nbsp&nbsp*")
                     }
                     // 若作业内容长度大于200
                     if ($("#workContent").val().length > 200) {
-                        $("#workContentError").html("&nbsp&nbsp&nbsp&nbsp作 业 内 容 长 度 最 大 限 制 为 200 !")
+                        $("#workContentError").html("&nbsp&nbsp&nbsp&nbsp作 业 内 容 最 大 长 度 限 制 为 200 !")
                     } else {
                         $("#workContentError").html("&nbsp&nbsp&nbsp&nbsp*")
                     }
