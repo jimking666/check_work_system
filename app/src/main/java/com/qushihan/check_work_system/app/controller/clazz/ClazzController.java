@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.qushihan.check_work_system.clazz.dto.ClazzDto;
 import com.qushihan.check_work_system.clazz.dto.GetClazzBySearchRequest;
+import com.qushihan.check_work_system.clazz.enums.CreateClazzStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,9 +36,14 @@ public class ClazzController {
      * @param response
      */
     @PostMapping("/create")
-    public void createClazz(@RequestBody CreateClazzRequest createClazzRequest, HttpServletResponse response) {
+    public void createClazz(@RequestBody CreateClazzRequest createClazzRequest, HttpServletRequest request, HttpServletResponse response) {
         String clazzName = createClazzRequest.getClazzName();
         String createMessge = clazzService.createClazz(clazzName);
+        if (createMessge.equals(CreateClazzStatus.CREATE_SUCCESS.getMessage())) {
+            List<ClazzDto> clazzDtos = clazzService.queryAllClazz();
+            request.getServletContext().setAttribute("clazzDtos", clazzDtos);
+            request.getServletContext().setAttribute("searchClazzDtos", clazzDtos);
+        }
         PrintWriterUtil.print(createMessge, response);
     }
 
