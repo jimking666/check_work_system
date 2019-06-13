@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0a978ed-af39-4987-8c2a-a260de65e57a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/submitwork/SubmitWorkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/submitwork/SubmitWorkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/register.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/register.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/work/WorkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/work/WorkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/app/target/" />
@@ -40,64 +39,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/clazz/ClazzController.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/submitwork/SubmitWorkController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1152">
-              <caret line="66" column="63" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/clazz/clazz-biz/src/main/java/com/qushihan/check_work_system/clazz/api/impl/ClazzServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1848">
-              <caret line="97" column="50" selection-start-line="97" selection-start-column="50" selection-end-line="97" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/clazz/clazz-biz/src/main/java/com/qushihan/check_work_system/clazz/dao/ClazzDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="92" column="7" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/register.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/teacher/TeacherController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/api/impl/TeacherServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/dao/TeacherDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+            <state relative-caret-position="457">
+              <caret line="73" column="61" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,8 +53,66 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/workManagement.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5160">
-              <caret line="215" column="33" selection-start-line="215" selection-start-column="33" selection-end-line="215" selection-end-column="33" />
+            <state relative-caret-position="150">
+              <caret line="327" column="45" selection-start-line="327" selection-start-column="28" selection-end-line="327" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/submitWorkDetail.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="133" column="38" selection-start-line="133" selection-start-column="38" selection-end-line="133" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="92" column="29" lean-forward="true" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/register.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="57" column="17" selection-start-line="37" selection-start-column="18" selection-end-line="57" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/config/WebMvcConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="18" column="75" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/index/IndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+              <folding>
+                <element signature="e#2238#2239#0" expanded="true" />
+                <element signature="e#2280#2281#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/teacher/TeacherController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="84" column="50" lean-forward="true" selection-start-line="84" selection-start-column="50" selection-end-line="84" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -114,8 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/work/WorkController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
+            <state relative-caret-position="528">
+              <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,13 +130,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/courseManagement.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="601">
+              <caret line="501" column="32" selection-start-line="501" selection-start-column="32" selection-end-line="501" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -149,9 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>textarea</find>
-      <find>closeCreateWorkWindow</find>
-      <find>submitWorkDtos</find>
       <find>&lt;artifactId&gt;student-api&lt;/artifactId&gt;</find>
       <find>Boolean score</find>
       <find>Integer score</find>
@@ -175,10 +175,13 @@
       <find>创建班级</find>
       <find>查询</find>
       <find>主页面</find>
-      <find>发布作业</find>
       <find>createWork</find>
       <find>创建时间</find>
       <find>getClazzBySearch</find>
+      <find>getServletContext().</find>
+      <find>发布作业</find>
+      <find>getAttribute</find>
+      <find>releaseWorkDetail</find>
     </findStrings>
     <replaceStrings>
       <replace>work_submit_system.</replace>
@@ -211,7 +214,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/index/IndexController.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/clazz/ClazzController.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/course/CourseController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/work/WorkController.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/student/StudentController.java" />
         <option value="$PROJECT_DIR$/business/clazz/clazz-biz/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/business/course/course-biz/src/main/resources/generatorConfig.xml" />
@@ -222,7 +224,6 @@
         <option value="$PROJECT_DIR$/core/core-biz/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/courseTeacherClazz/CourseTeacherClazzController.java" />
         <option value="$PROJECT_DIR$/app/src/main/resources/templates/clazzStudentDetail.ftl" />
-        <option value="$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl" />
         <option value="$PROJECT_DIR$/app/src/main/resources/templates/submitWorkDetail.ftl" />
         <option value="$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/dto/LoginTeacherRequest.java" />
         <option value="$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/enums/JudgeLoginStatus.java" />
@@ -241,6 +242,8 @@
         <option value="$PROJECT_DIR$/app/src/main/resources/templates/login.ftl" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/submitwork/SubmitWorkController.java" />
         <option value="$PROJECT_DIR$/app/src/main/resources/templates/register.ftl" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/work/WorkController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl" />
       </list>
     </option>
   </component>
@@ -287,7 +290,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -1218,18 +1221,18 @@
       <workItem from="1559657710875" duration="658000" />
       <workItem from="1559895981168" duration="943000" />
       <workItem from="1560167402095" duration="6745000" />
-      <workItem from="1560405309908" duration="2605000" />
+      <workItem from="1560405309908" duration="6569000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="307664000" />
+    <option name="totallyTimeSpent" value="311628000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1721" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1721" height="695" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18941672" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18941672" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1273,24 +1276,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7526">
-          <caret line="272" column="22" selection-start-line="272" selection-start-column="22" selection-end-line="272" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/clazzStudentDetail.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="89" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/index/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1462,13 +1451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/courseTeacherClazz/CourseTeacherClazzController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="47" column="61" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/api/impl/CourseTeacherClazzServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1490,24 +1472,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/courseManagement.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12024">
-          <caret line="501" column="32" selection-start-line="501" selection-start-column="32" selection-end-line="501" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/business/course/course-biz/src/main/java/com/qushihan/check_work_system/course/api/impl/CourseServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="68" column="26" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1532,16 +1500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/submitwork/SubmitWorkController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="73" column="61" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/api/impl/SubmitWorkServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1464">
@@ -1553,13 +1511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
           <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/submitWorkDetail.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3192">
-          <caret line="133" column="38" selection-start-line="133" selection-start-column="38" selection-end-line="133" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1577,44 +1528,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/workManagement.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5160">
-          <caret line="215" column="33" selection-start-line="215" selection-start-column="33" selection-end-line="215" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/work/WorkController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/business/clazz/clazz-biz/src/main/java/com/qushihan/check_work_system/clazz/dao/ClazzDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
           <caret line="92" column="7" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/teacher/TeacherController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -1632,10 +1549,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="47" column="24" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/courseTeacherClazz/CourseTeacherClazzController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/courseManagement.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="501" column="32" selection-start-line="501" selection-start-column="32" selection-end-line="501" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/config/WebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="18" column="75" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/index/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+          <folding>
+            <element signature="e#2238#2239#0" expanded="true" />
+            <element signature="e#2280#2281#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/teacher/TeacherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="84" column="50" lean-forward="true" selection-start-line="84" selection-start-column="50" selection-end-line="84" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/submitwork/SubmitWorkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="73" column="61" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/workManagement.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="327" column="45" selection-start-line="327" selection-start-column="28" selection-end-line="327" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/submitWorkDetail.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="133" column="38" selection-start-line="133" selection-start-column="38" selection-end-line="133" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/work/WorkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/register.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        <state relative-caret-position="289">
+          <caret line="57" column="17" selection-start-line="37" selection-start-column="18" selection-end-line="57" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="92" column="29" lean-forward="true" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
         </state>
       </provider>
     </entry>

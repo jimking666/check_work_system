@@ -87,6 +87,20 @@
                         $("#repetitiveRateError").html("&nbsp&nbsp*")
                     }
                     return
+                } else if ($("#workTitle").val().length > 20 || $("#workContent").val().length > 200) {
+                    // 若作业题目长度大于20
+                    if ($("#workTitle").val().length > 20) {
+                        $("#workTitleError").html("&nbsp&nbsp&nbsp&nbsp作 业 题 目 长 度 最 大 限 制 为 20 !")
+                    } else {
+                        $("#workTitleError").html("&nbsp&nbsp&nbsp&nbsp*")
+                    }
+                    // 若作业内容长度大于200
+                    if ($("#workContent").val().length > 200) {
+                        $("#workContentError").html("&nbsp&nbsp&nbsp&nbsp作 业 内 容 长 度 最 大 限 制 为 200 !")
+                    } else {
+                        $("#workContentError").html("&nbsp&nbsp&nbsp&nbsp*")
+                    }
+                    return
                 } else {
                     $.ajax({
                         url: "/work/create",
@@ -102,21 +116,7 @@
                             200: function (data) {
                                 if (data.indexOf("发布成功") != -1) {
                                     alert("发 布 成 功 !")
-                                    $.ajax({
-                                        url: "/work/releaseWorkDetail",
-                                        type: "post",
-                                        data: JSON.stringify({
-                                            "courseTeacherClazzId": $("#courseTeacherClazzId").val()
-                                        }),
-                                        contentType: "application/json;charset=utf-8",
-                                        statusCode: {
-                                            200: function (data) {
-                                                if (data.indexOf("发布作业详情查询成功") != -1) {
-                                                    window.location = "/releaseWorkDetail"
-                                                }
-                                            }
-                                        }
-                                    })
+                                    window.location = "/releaseWorkDetail"
                                 } else if (data.indexOf("重复发布") != -1) {
                                     $("#workTitleError").html("&nbsp&nbsp*")
                                     $("#workContentError").html("&nbsp&nbsp*")

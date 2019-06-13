@@ -6,6 +6,9 @@ import java.util.stream.Collectors;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.qushihan.check_work_system.core.api.CourseTeacherClazzService;
+import com.qushihan.check_work_system.core.dto.CourseTeacherClazzDto;
+import com.qushihan.check_work_system.teacher.dto.TeacherDto;
 import com.qushihan.check_work_system.work.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +27,8 @@ public class WorkController {
     @Autowired
     private WorkService workService;
 
+    @Autowired
+    private CourseTeacherClazzService courseTeacherClazzService;
     /**
      * 发布作业详情
      *
@@ -48,12 +53,17 @@ public class WorkController {
      * @param response
      */
     @PostMapping("/create")
-    public void createWork(@RequestBody CreateWorkRequest createWorkRequest, HttpServletResponse response) {
+    public void createWork(@RequestBody CreateWorkRequest createWorkRequest, HttpServletRequest request, HttpServletResponse response) {
         String workTitle = createWorkRequest.getWorkTitle();
         String workContent = createWorkRequest.getWorkContent();
         Float repetitiveRate = createWorkRequest.getRepetitiveRate();
         Long courseTeacherClazzId = TransitionUtil.stringToLong(createWorkRequest.getCourseTeacherClazzId());
         String createMessge = workService.createWork(workTitle, workContent, repetitiveRate, courseTeacherClazzId);
+        TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
+        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherDto.getTeacherId());
+        List<WorkDto> workDtos = workService.queryWorkDtoListByCourseTeacherClazzId(courseTeacherClazzId);
+        request.getServletContext().setAttribute("courseTeacherClazzDtos", courseTeacherClazzDtos);
+        request.getServletContext().setAttribute("workDtos", workDtos);
         PrintWriterUtil.print(createMessge, response);
     }
 
