@@ -35,6 +35,26 @@
                         $("#teacherNameError").html("&nbsp&nbsp&nbsp&nbsp*")
                     }
                     return
+                } else if ($("#teacherNumber").val().length > 20 || $("#teacherPassword").val().length > 20 || $("#teacherName").val().length > 10) {
+                    // 若教师编号长度大于20
+                    if ($("#teacherNumber").val().length > 20) {
+                        $("#teacherNumberError").html("&nbsp&nbsp&nbsp&nbsp教 师 编 号 长 度 最 长 为 20 位 !")
+                    } else {
+                        $("#teacherNumberError").html("&nbsp&nbsp&nbsp&nbsp*")
+                    }
+                    // 若教师密码长度大于20
+                    if ($("#teacherPassword").val().length > 20) {
+                        $("#teacherPasswordError").html("&nbsp&nbsp&nbsp&nbsp教 师 密 码 长 度 最 长 为 20 位 !")
+                    } else {
+                        $("#teacherPasswordError").html("&nbsp&nbsp&nbsp&nbsp*")
+                    }
+                    // 若教师姓名长度大于10
+                    if ($("#teacherName").val().length > 10) {
+                        $("#teacherNameError").html("&nbsp&nbsp&nbsp&nbsp教 师 姓 名 长 度 最 长 为 10 位 !")
+                    } else {
+                        $("#teacherNameError").html("&nbsp&nbsp&nbsp&nbsp*")
+                    }
+                    return
                 } else {
                     $("#teacherNumberError").html("&nbsp&nbsp&nbsp&nbsp*")
                     $("#teacherPasswordError").html("&nbsp&nbsp&nbsp&nbsp*")
