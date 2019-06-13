@@ -235,6 +235,8 @@
             $("#createClazz").click(function () {
                 if ($("#clazzName").val() == "") {
                     $("#clazzNameError").html("&nbsp&nbsp班 级 名 称 不 能 为 空 !")
+                } else if ($("#clazzName").val().length > 10) {
+                    $("#clazzNameError").html("&nbsp&nbsp班 级 名 称 最 大 长 度 限 制 为 10 !")
                 } else {
                     $.ajax({
                         url: "/clazz/create",
