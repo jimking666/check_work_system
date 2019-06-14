@@ -18,7 +18,7 @@ public class TeacherRightDto {
     private Long teacherId;
 
     /**
-     * 权限等级 0：没有删除功能 1：具有删除功能
+     * 权限等级 0：没有课程与班级删除权限 1：具有所有删除权限
      */
     private Integer rightLevel;
 

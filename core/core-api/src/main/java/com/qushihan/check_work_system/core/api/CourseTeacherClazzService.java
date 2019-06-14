@@ -39,4 +39,11 @@ public interface CourseTeacherClazzService {
      * @return
      */
     Integer workCountAddOne(Long courseTeacherClazzId);
+
+    /**
+     * 通过课程id得到课程教师班级Dto
+     *
+     * @return
+     */
+    List<CourseTeacherClazzDto> getByCourseId(Long courseId);
 }

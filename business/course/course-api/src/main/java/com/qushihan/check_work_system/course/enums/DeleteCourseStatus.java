@@ -12,7 +12,17 @@ public enum DeleteCourseStatus {
     /**
      * 删除成功
      */
-    DELETE_SUCCESS(0, "删除成功")
+    DELETE_SUCCESS(0, "删除成功"),
+
+    /**
+     * 无此课程
+     */
+    NOT_SUCH_COURSE(1, "无此课程"),
+
+    /**
+     * 存在关联
+     */
+    HAVE_RELEVANCE(2, "存在关联")
     ;
 
     @Getter

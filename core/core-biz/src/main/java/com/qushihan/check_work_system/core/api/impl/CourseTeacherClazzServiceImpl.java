@@ -63,7 +63,15 @@ public class CourseTeacherClazzServiceImpl implements CourseTeacherClazzService 
         if (CollectionUtils.isEmpty(courseTeacherClazzes)) {
             return Collections.emptyList();
         }
-        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzes.stream()
+        return groupCourseTeacherClazzDtoList(courseTeacherClazzes);
+    }
+
+    /**
+     * 进行CourseTeacherClazzDto列表组装
+     *
+     */
+    private List<CourseTeacherClazzDto> groupCourseTeacherClazzDtoList(List<CourseTeacherClazz> courseTeacherClazzes) {
+        return courseTeacherClazzes.stream()
                 .map(courseTeacherClazz -> {
                     CourseTeacherClazzDto courseTeacherClazzDto = new CourseTeacherClazzDto();
                     BeanUtils.copyProperties(courseTeacherClazz, courseTeacherClazzDto);
@@ -75,7 +83,6 @@ public class CourseTeacherClazzServiceImpl implements CourseTeacherClazzService 
                     courseTeacherClazzDto.setClazzName(clazzDto.getClazzName());
                     return courseTeacherClazzDto;
                 }).collect(Collectors.toList());
-        return courseTeacherClazzDtos;
     }
 
     @Override
@@ -95,5 +102,14 @@ public class CourseTeacherClazzServiceImpl implements CourseTeacherClazzService 
             return courseTeacherClazzDao.workCountUpdate(courseTeacherClazzId, courseTeacherClazz);
         }
         return null;
+    }
+
+    @Override
+    public List<CourseTeacherClazzDto> getByCourseId(Long courseId) {
+        List<CourseTeacherClazz> courseTeacherClazzes = courseTeacherClazzDao.getByCourseId(courseId);
+        if (CollectionUtils.isEmpty(courseTeacherClazzes)) {
+            return Collections.emptyList();
+        }
+        return groupCourseTeacherClazzDtoList(courseTeacherClazzes);
     }
 }

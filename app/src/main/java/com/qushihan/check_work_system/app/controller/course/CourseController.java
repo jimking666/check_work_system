@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.qushihan.check_work_system.course.dto.CourseDto;
 import com.qushihan.check_work_system.course.dto.GetCourseBySearchRequest;
 import com.qushihan.check_work_system.course.enums.CreateCourseStatus;
+import com.qushihan.check_work_system.course.enums.DeleteCourseStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -53,9 +54,14 @@ public class CourseController {
      * @param response
      */
     @PostMapping("/delete")
-    public void deleteCourse(@RequestBody DeleteCourseRequest deleteCourseRequest, HttpServletResponse response) {
+    public void deleteCourse(@RequestBody DeleteCourseRequest deleteCourseRequest, HttpServletRequest request, HttpServletResponse response) {
         Long courseId = TransitionUtil.stringToLong(deleteCourseRequest.getCourseId());
         String deleteMessge = courseService.deleteCourse(courseId);
+        if (deleteMessge.equals(DeleteCourseStatus.DELETE_SUCCESS.getMessage())) {
+            List<CourseDto> courseDtos = courseService.queryAllCourse();
+            request.getServletContext().setAttribute("courseDtos", courseDtos);
+            request.getServletContext().setAttribute("searchCourseDtos", courseDtos);
+        }
         PrintWriterUtil.print(deleteMessge, response);
     }
 

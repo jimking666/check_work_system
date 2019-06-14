@@ -206,6 +206,10 @@
                             if (data.indexOf("删除成功") != -1) {
                                 alert("删 除 成 功 !")
                                 window.location = "/courseManagement"
+                            } else if (data.indexOf("无此课程") != -1) {
+                                alert("无此课程")
+                            } else if (data.indexOf("存在关联") != -1) {
+                                alert("此课程已创建课程教师班级关系，请删除关系后再删除此课程！")
                             }
                         }
                     }
@@ -437,14 +441,12 @@
                                                 onclick="releaseWorkDetail('${courseTeacherClazzDto.courseTeacherClazzId}')">
                                             发布作业详情
                                         </button>
-                                        <#if rightLevel == 1>
-                                            <button class="btn btn-danger" onclick="addCourseTeacherClazzId
-                                                    ('${courseTeacherClazzDto.courseTeacherClazzId}')"
-                                                    data-toggle="modal"
-                                                    data-target="#shanchukechengjiaoshibanji">
-                                                删除
-                                            </button>
-                                        </#if>
+                                        <button class="btn btn-danger" onclick="addCourseTeacherClazzId
+                                                ('${courseTeacherClazzDto.courseTeacherClazzId}')"
+                                                data-toggle="modal"
+                                                data-target="#shanchukechengjiaoshibanji">
+                                            删除
+                                        </button>
                                     </td>
                                 </#if>
                             </tr>

@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import com.qushihan.check_work_system.core.api.CourseTeacherClazzService;
+import com.qushihan.check_work_system.core.dto.CourseTeacherClazzDto;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,6 +26,9 @@ public class CourseServiceImpl implements CourseService {
 
     @Autowired
     private CourseDao courseDao;
+
+    @Autowired
+    private CourseTeacherClazzService courseTeacherClazzService;
 
     @Override
     public String createCourse(String courseName) {
@@ -56,15 +61,25 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public String deleteCourse(Long courseId) {
-        Course course = new Course();
+        List<Course> courses = courseDao.getByCourseId(courseId);
+        if (CollectionUtils.isEmpty(courses)) {
+            return DeleteCourseStatus.NOT_SUCH_COURSE.getMessage();
+        }
+        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByCourseId(courseId);
+        if (!CollectionUtils.isEmpty(courseTeacherClazzDtos)) {
+            return DeleteCourseStatus.HAVE_RELEVANCE.getMessage();
+        }
+        Course course = courses.stream()
+                .findFirst()
+                .orElse(new Course());
         course.setIsdel(FieldIsdelStatus.ISDEL_TRUE.getIsdel());
-        courseDao.updateCourseByCourseId(course, courseId);
+        courseDao.updateByCourseId(course);
         return DeleteCourseStatus.DELETE_SUCCESS.getMessage();
     }
 
     @Override
     public CourseDto queryCourseDtoByCourseId(Long courseId) {
-        List<Course> courses = courseDao.queryCourseListByCourseId(courseId);
+        List<Course> courses = courseDao.getByCourseId(courseId);
         Course course = courses.stream().findFirst().orElse(null);
         if (Optional.ofNullable(course).isPresent()) {
             CourseDto courseDto = new CourseDto();

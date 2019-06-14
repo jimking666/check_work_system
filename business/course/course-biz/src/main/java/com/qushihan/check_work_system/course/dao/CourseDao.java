@@ -64,14 +64,16 @@ public class CourseDao {
      * 通过课程id更改课程记录
      *
      * @param course
-     * @param courseId
      *
      * @return
      */
-    public int updateCourseByCourseId(Course course, Long courseId) {
+    public int updateByCourseId(Course course) {
+        if (!Optional.ofNullable(course).isPresent()) {
+            return 0;
+        }
         CourseExample courseExample = new CourseExample();
         CourseExample.Criteria criteria = courseExample.createCriteria();
-        criteria.andCourseIdEqualTo(courseId);
+        criteria.andCourseIdEqualTo(course.getCourseId());
         return courseMapper.updateByExampleSelective(course, courseExample);
     }
 
@@ -82,9 +84,9 @@ public class CourseDao {
      *
      * @return
      */
-    public List<Course> queryCourseListByCourseId(Long courseId) {
+    public List<Course> getByCourseId(Long courseId) {
         if (!Optional.ofNullable(courseId).isPresent()) {
-            return Collections.EMPTY_LIST;
+            return Collections.emptyList();
         }
         CourseExample courseExample = new CourseExample();
         CourseExample.Criteria criteria = courseExample.createCriteria();
