@@ -4,6 +4,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+import com.qushihan.check_work_system.teacher.mapper.auto.TeacherRightMapper;
+import com.qushihan.check_work_system.teacher.model.auto.TeacherRight;
+import com.qushihan.check_work_system.teacher.model.auto.TeacherRightExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -21,13 +24,13 @@ public class TeacherDao {
     private TeacherMapper teacherMapper;
 
     /**
-     * 教师注册
+     * 创建教师信息
      *
      * @param teacher
      *
      * @return
      */
-    public int registerTeacher(Teacher teacher) {
+    public int createTeacher(Teacher teacher) {
         if (!Optional.ofNullable(teacher).isPresent()) {
             return 0;
         }

@@ -437,12 +437,14 @@
                                                 onclick="releaseWorkDetail('${courseTeacherClazzDto.courseTeacherClazzId}')">
                                             发布作业详情
                                         </button>
-                                        <button class="btn btn-danger" onclick="addCourseTeacherClazzId
-                                                ('${courseTeacherClazzDto.courseTeacherClazzId}')"
-                                                data-toggle="modal"
-                                                data-target="#shanchukechengjiaoshibanji">
-                                            删除
-                                        </button>
+                                        <#if rightLevel == 1>
+                                            <button class="btn btn-danger" onclick="addCourseTeacherClazzId
+                                                    ('${courseTeacherClazzDto.courseTeacherClazzId}')"
+                                                    data-toggle="modal"
+                                                    data-target="#shanchukechengjiaoshibanji">
+                                                删除
+                                            </button>
+                                        </#if>
                                     </td>
                                 </#if>
                             </tr>
@@ -505,7 +507,9 @@
                         <th>课程名称</th>
                         <th>创建日期</th>
                         <#if teacherDto??>
-                            <th>操作</th>
+                            <#if rightLevel == 1>
+                                <th>操作</th>
+                            </#if>
                         </#if>
                     </tr>
                     </thead>
@@ -517,13 +521,15 @@
                                 <td>${courseDto.courseName}</td>
                                 <td>${courseDto.createTime?string("yyyy-MM-dd")}</td>
                                 <#if teacherDto??>
-                                    <td>
-                                        <button class="btn btn-danger" onclick="addCourseId('${courseDto.courseId}')"
-                                                data-toggle="modal"
-                                                data-target="#shanchukecheng">
-                                            删除
-                                        </button>
-                                    </td>
+                                    <#if rightLevel == 1>
+                                        <td>
+                                            <button class="btn btn-danger" onclick="addCourseId('${courseDto.courseId}')"
+                                                    data-toggle="modal"
+                                                    data-target="#shanchukecheng">
+                                                删除
+                                            </button>
+                                        </td>
+                                    </#if>
                                 </#if>
                             </tr>
                         </#list>
@@ -600,11 +606,13 @@
                             <td>${clazzDto.createTime?string("yyyy-MM-dd")}</td>
                             <#if teacherDto??>
                                 <td>
-                                    <button class="btn btn-danger" onclick="addClazzId('${clazzDto.clazzId}')"
-                                            data-toggle="modal"
-                                            data-target="#shanchubanji">
-                                        删除
-                                    </button>
+                                    <#if rightLevel == 1>
+                                        <button class="btn btn-danger" onclick="addClazzId('${clazzDto.clazzId}')"
+                                                data-toggle="modal"
+                                                data-target="#shanchubanji">
+                                            删除
+                                        </button>
+                                    </#if>
                                     <button class="btn btn-default"
                                             onclick="studentDetail('${clazzDto.clazzId}')">学生详情
                                     </button>

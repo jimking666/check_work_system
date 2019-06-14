@@ -6,9 +6,14 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import com.qushihan.check_work_system.inf.util.GetIdUtil;
+import com.qushihan.check_work_system.teacher.api.TeacherRightService;
+import com.qushihan.check_work_system.teacher.dao.TeacherRightDao;
+import com.qushihan.check_work_system.teacher.dto.TeacherRightDto;
+import com.qushihan.check_work_system.teacher.model.auto.TeacherRight;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import com.qushihan.check_work_system.teacher.api.TeacherService;
@@ -26,21 +31,27 @@ public class TeacherServiceImpl implements TeacherService {
     @Autowired
     private TeacherDao teacherDao;
 
+    @Autowired
+    private TeacherRightService teacherRightService;
+
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public String registerTeacher(String teacherNumber, String teacherPassword, String teacherName) {
         // 检查是否重复注册
         List<Teacher> teachers = teacherDao.judgeRepeatRegister(teacherNumber);
         if (!CollectionUtils.isEmpty(teachers)) {
             return JudgeRegisterStatus.REPEAT_EXIST.getMessge();
         }
-        // 注册成功
+        // 教师信息创建
         Long teacherId = GetIdUtil.getId();
         Teacher teacher = new Teacher();
         teacher.setTeacherId(teacherId);
         teacher.setTeacherNumber(teacherNumber);
         teacher.setTeacherPassword(teacherPassword);
         teacher.setTeacherName(teacherName);
-        teacherDao.registerTeacher(teacher);
+        teacherDao.createTeacher(teacher);
+        // 教师权限创建
+        teacherRightService.createTeacherRight(teacherId);
         return JudgeRegisterStatus.REGISTER_SUCCESS.getMessge();
     }
 

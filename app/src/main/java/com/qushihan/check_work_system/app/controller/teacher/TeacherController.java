@@ -9,6 +9,8 @@ import com.qushihan.check_work_system.core.api.CourseTeacherClazzService;
 import com.qushihan.check_work_system.core.dto.CourseTeacherClazzDto;
 import com.qushihan.check_work_system.course.api.CourseService;
 import com.qushihan.check_work_system.course.dto.CourseDto;
+import com.qushihan.check_work_system.teacher.api.TeacherRightService;
+import com.qushihan.check_work_system.teacher.dto.TeacherRightDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,6 +35,9 @@ public class TeacherController {
 
     @Autowired
     private TeacherService teacherService;
+
+    @Autowired
+    private TeacherRightService teacherRightService;
 
     @Autowired
     private ClazzService clazzService;
@@ -75,22 +80,32 @@ public class TeacherController {
         if (CollectionUtils.isEmpty(teacherDtos)) {
             loginMessage = JudgeLoginStatus.NUMBER_OR_PASSWORD_ERROR.getMessage();
         } else {
+            loginMessage = JudgeLoginStatus.LOGIN_SUCCESS.getMessage();
+            // 教师信息
             TeacherDto teacherDto = teacherDtos.stream()
                     .findFirst()
                     .orElse(new TeacherDto());
-            loginMessage = JudgeLoginStatus.LOGIN_SUCCESS.getMessage();
+            // 课程信息， 课程教师班级弹窗课程信息
             List<CourseDto> courseDtos = courseService.queryAllCourse();
+            // 班级信息， 课程教师班级弹窗班级信息
             List<ClazzDto> clazzDtos = clazzService.queryAllClazz();
             Long teacherId = Optional.ofNullable(teacherDto)
                     .map(TeacherDto::getTeacherId)
                     .orElse(0L);
+            // 课程教师班级信息
             List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherId);
+            // 教师权益信息
+            TeacherRightDto teacherRightDto = teacherRightService.getByTeacherId(teacherId);
+            Integer rightLevel = Optional.ofNullable(teacherRightDto)
+                    .map(TeacherRightDto::getRightLevel)
+                    .orElse(0);
             request.getServletContext().setAttribute("courseTeacherClazzDtos", courseTeacherClazzDtos);
             request.getServletContext().setAttribute("courseDtos", courseDtos);
             request.getServletContext().setAttribute("searchCourseDtos", courseDtos);
             request.getServletContext().setAttribute("clazzDtos", clazzDtos);
             request.getServletContext().setAttribute("searchClazzDtos", clazzDtos);
             request.getServletContext().setAttribute("teacherDto", teacherDto);
+            request.getServletContext().setAttribute("rightLevel", rightLevel);
         }
         PrintWriterUtil.print(loginMessage, response);
     }

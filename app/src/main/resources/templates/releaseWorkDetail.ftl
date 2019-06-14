@@ -290,12 +290,14 @@
                                             <button class="btn btn-primary" onclick="submitWorkDetail('${workDto.workId}')">
                                                 提交作业详情
                                             </button>
-                                            <button class="btn btn-danger"
-                                                    onclick="addWorkId('${workDto.workId}','${courseTeacherClazzId}')"
-                                                    data-toggle="modal"
-                                                    data-target="#shanchuzuoye">
-                                                删除
-                                            </button>
+                                            <#if rightLevel == 1>
+                                                <button class="btn btn-danger"
+                                                        onclick="addWorkId('${workDto.workId}','${courseTeacherClazzId}')"
+                                                        data-toggle="modal"
+                                                        data-target="#shanchuzuoye">
+                                                    删除
+                                                </button>
+                                            </#if>
                                         </td>
                                     </#if>
                                 </tr>

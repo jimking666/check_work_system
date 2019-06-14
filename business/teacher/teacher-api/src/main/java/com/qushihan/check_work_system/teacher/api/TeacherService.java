@@ -1,6 +1,7 @@
 package com.qushihan.check_work_system.teacher.api;
 
 import com.qushihan.check_work_system.teacher.dto.TeacherDto;
+import com.qushihan.check_work_system.teacher.dto.TeacherRightDto;
 
 import java.util.List;
 

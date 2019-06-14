@@ -27,6 +27,9 @@ public class CourseDao {
      * @return
      */
     public int createCourse(Course course) {
+        if (!Optional.ofNullable(course).isPresent()) {
+            return 0;
+        }
         return courseMapper.insertSelective(course);
     }
 

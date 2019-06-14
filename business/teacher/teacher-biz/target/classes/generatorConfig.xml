@@ -59,7 +59,8 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
         <!--指定数据库表 -->
-        <table tableName="teacher"/>
+        <!--<table tableName="teacher"/>-->
+        <table tableName="teacher_right"/>
     </context>
 </generatorConfiguration>
 
