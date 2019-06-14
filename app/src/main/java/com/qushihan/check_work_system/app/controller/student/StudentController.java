@@ -36,7 +36,7 @@ public class StudentController {
     public void studentDetail(@RequestBody StudentDetailRequest studentDetailRequest, HttpServletRequest request,
             HttpServletResponse response) {
         Long clazzId = TransitionUtil.stringToLong(studentDetailRequest.getClazzId());
-        List<StudentDto> studentDtos = studentService.queryStudentDtoListByClazzId(clazzId);
+        List<StudentDto> studentDtos = studentService.getByClazzId(clazzId);
         request.getServletContext().setAttribute("studentDtos", studentDtos);
         request.getServletContext().setAttribute("clazzIdForStudent", clazzId);
         PrintWriterUtil.print("学生详情查询成功", response);
@@ -57,7 +57,7 @@ public class StudentController {
                 .map(StudentDto::getStudentId)
                 .collect(Collectors.toList());
         Long clazzId = (Long) request.getServletContext().getAttribute("clazzIdForStudent");
-        List<StudentDto> studentDtos = studentService.queryStudentDtoListByClazzId(clazzId);
+        List<StudentDto> studentDtos = studentService.getByClazzId(clazzId);
         studentDtos = studentDtos.stream()
                 .filter(studentDto -> studentIds.contains(studentDto.getStudentId()))
                 .collect(Collectors.toList());

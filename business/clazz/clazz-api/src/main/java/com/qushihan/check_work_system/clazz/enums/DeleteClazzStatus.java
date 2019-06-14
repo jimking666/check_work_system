@@ -12,7 +12,17 @@ public enum DeleteClazzStatus {
     /**
      * 删除成功
      */
-    DELETE_SUCCESS(0, "删除成功")
+    DELETE_SUCCESS(0, "删除成功"),
+
+    /**
+     * 无此班级
+     */
+    NOT_SUCH_COURSE(1, "无此班级"),
+
+    /**
+     * 存在关联
+     */
+    HAVE_RELEVANCE(2, "存在关联")
     ;
 
     @Getter

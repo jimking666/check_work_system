@@ -284,6 +284,10 @@
                             if (data.indexOf("删除成功") != -1) {
                                 alert("删 除 成 功 !")
                                 window.location = "/clazzManagement"
+                            } else if (data.indexOf("无此班级") != -1) {
+                                alert("无此班级")
+                            } else if (data.indexOf("存在关联") != -1) {
+                                alert("此班级已创建课程教师班级关系，请删除关系后再删除此班级！")
                             }
                         }
                     }

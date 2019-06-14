@@ -24,26 +24,26 @@ public class StudentServiceImpl implements StudentService {
     private ClazzService clazzService;
 
     @Override
-    public List<StudentDto> queryStudentDtoListByClazzId(Long clazzId) {
-        List<Student> students = studentDao.queryStudentListByClazzId(clazzId);
-        List<StudentDto> studentDtos = students.stream().map(student -> {
-            StudentDto studentDto = new StudentDto();
-            ClazzDto clazzDto = clazzService.queryClazzDtoByClazzId(student.getClazzId());
-            studentDto.setClazzName(clazzDto.getClazzName());
-            BeanUtils.copyProperties(student, studentDto);
-            return studentDto;
-        }).collect(Collectors.toList());
+    public List<StudentDto> getByClazzId(Long clazzId) {
+        List<Student> students = studentDao.getByClazzId(clazzId);
+        List<StudentDto> studentDtos = students.stream()
+                .map(student -> {
+                    StudentDto studentDto = new StudentDto();
+                    BeanUtils.copyProperties(student, studentDto);
+                    ClazzDto clazzDto = clazzService.getByClazzId(student.getClazzId());
+                    studentDto.setClazzName(clazzDto.getClazzName());
+                    return studentDto;
+                }).collect(Collectors.toList());
         return studentDtos;
     }
 
     @Override
-    public Integer batchUpdateStudentByStudentId(List<StudentDto> studentDtos) {
-        List<Student> students = studentDtos.stream().map(studentDto -> {
-            Student student = new Student();
-            BeanUtils.copyProperties(studentDto, student);
-            return student;
-        }).collect(Collectors.toList());
-        return studentDao.batchUpdateStudentByStudentId(students);
+    public void updateByClazzId(Long clazzId) {
+        List<Student> students = studentDao.getByClazzId(clazzId);
+        students.forEach(student -> {
+            student.setClazzId(null);
+            studentDao.updateById(student);
+        });
     }
 
     @Override

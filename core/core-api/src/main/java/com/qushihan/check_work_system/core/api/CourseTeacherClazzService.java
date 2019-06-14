@@ -46,4 +46,11 @@ public interface CourseTeacherClazzService {
      * @return
      */
     List<CourseTeacherClazzDto> getByCourseId(Long courseId);
+
+    /**
+     * 通过班级id得到课程教师班级Dto
+     *
+     * @return
+     */
+    List<CourseTeacherClazzDto> getByClazzId(Long clazzId);
 }

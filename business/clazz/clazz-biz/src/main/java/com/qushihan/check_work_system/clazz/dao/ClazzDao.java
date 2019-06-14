@@ -1,6 +1,8 @@
 package com.qushihan.check_work_system.clazz.dao;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,7 +64,10 @@ public class ClazzDao {
      *
      * @return
      */
-    public List<Clazz> queryClazzListByClazzId(Long clazzId) {
+    public List<Clazz> getByClazzId(Long clazzId) {
+        if (!Optional.ofNullable(clazzId).isPresent()) {
+            return Collections.emptyList();
+        }
         ClazzExample clazzExample = new ClazzExample();
         ClazzExample.Criteria criteria = clazzExample.createCriteria();
         criteria.andClazzIdEqualTo(clazzId);
@@ -74,14 +79,17 @@ public class ClazzDao {
      * 通过班级id更改班级记录
      *
      * @param clazz
-     * @param clazzId
      *
      * @return
      */
-    public int updateClazzByClazzId(Clazz clazz, Long clazzId) {
+    public int updateByClazzId(Clazz clazz) {
+        if (!Optional.ofNullable(clazz).isPresent()) {
+            return 0;
+        }
         ClazzExample clazzExample = new ClazzExample();
         ClazzExample.Criteria criteria = clazzExample.createCriteria();
-        criteria.andClazzIdEqualTo(clazzId);
+        criteria.andClazzIdEqualTo(clazz.getClazzId());
+        criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
         return clazzMapper.updateByExampleSelective(clazz, clazzExample);
     }
 

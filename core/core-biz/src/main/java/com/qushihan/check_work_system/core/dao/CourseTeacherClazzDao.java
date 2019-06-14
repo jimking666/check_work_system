@@ -145,8 +145,24 @@ public class CourseTeacherClazzDao {
         }
         CourseTeacherClazzExample courseTeacherClazzExample = new CourseTeacherClazzExample();
         CourseTeacherClazzExample.Criteria criteria = courseTeacherClazzExample.createCriteria();
-        criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
         criteria.andCourseIdEqualTo(courseId);
+        criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
+        return courseTeacherClazzMapper.selectByExample(courseTeacherClazzExample);
+    }
+
+    /**
+     * 通过班级id查询课程教师班级记录
+     *
+     * @return
+     */
+    public List<CourseTeacherClazz> getByClazzId(Long clazzId) {
+        if (!Optional.ofNullable(clazzId).isPresent()) {
+            return Collections.emptyList();
+        }
+        CourseTeacherClazzExample courseTeacherClazzExample = new CourseTeacherClazzExample();
+        CourseTeacherClazzExample.Criteria criteria = courseTeacherClazzExample.createCriteria();
+        criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
+        criteria.andClazzIdEqualTo(clazzId);
         return courseTeacherClazzMapper.selectByExample(courseTeacherClazzExample);
     }
 }

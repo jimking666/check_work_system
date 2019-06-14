@@ -2,6 +2,7 @@ package com.qushihan.check_work_system.student.dao;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,6 @@ import org.springframework.util.CollectionUtils;
 
 import com.qushihan.check_work_system.inf.enums.FieldIsdelStatus;
 import com.qushihan.check_work_system.student.mapper.auto.StudentMapper;
-import com.qushihan.check_work_system.student.mapper.biz.StudentBizMapper;
 import com.qushihan.check_work_system.student.model.auto.Student;
 import com.qushihan.check_work_system.student.model.auto.StudentExample;
 
@@ -20,9 +20,6 @@ public class StudentDao {
     @Autowired
     private StudentMapper studentMapper;
 
-    @Autowired
-    private StudentBizMapper studentBizMapper;
-
     /**
      * 通过班级id查询学生
      *
@@ -30,7 +27,10 @@ public class StudentDao {
      *
      * @return
      */
-    public List<Student> queryStudentListByClazzId(Long clazzId) {
+    public List<Student> getByClazzId(Long clazzId) {
+        if (!Optional.ofNullable(clazzId).isPresent()) {
+            return Collections.emptyList();
+        }
         StudentExample studentExample = new StudentExample();
         StudentExample.Criteria criteria = studentExample.createCriteria();
         criteria.andClazzIdEqualTo(clazzId);
@@ -39,14 +39,17 @@ public class StudentDao {
     }
 
     /**
-     * 通过每个学生id批量更新学生信息
+     * 通过学生id更新学生信息
      *
-     * @param students
+     * @param student
      *
      * @return
      */
-    public Integer batchUpdateStudentByStudentId(List<Student> students) {
-        return studentBizMapper.batchUpdateStudentByStudentId(students);
+    public int updateById(Student student) {
+        if (!Optional.ofNullable(student).isPresent()) {
+            return 0;
+        }
+        return studentMapper.updateByPrimaryKey(student);
     }
 
     /**

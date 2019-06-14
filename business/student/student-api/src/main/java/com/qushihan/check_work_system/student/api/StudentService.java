@@ -13,17 +13,19 @@ public interface StudentService {
      * @param clazzId
      * @return
      */
-    List<StudentDto> queryStudentDtoListByClazzId(Long clazzId);
+    List<StudentDto> getByClazzId(Long clazzId);
 
     /**
-     * 通过每个学生id批量更改学生信息
-     * @param studentDtos
+     * 通过班级id更改学生信息
+     *
+     * @param clazzId
      * @return
      */
-    Integer batchUpdateStudentByStudentId(List<StudentDto> studentDtos);
+    void updateByClazzId(Long clazzId);
 
     /**
      * 通过学生id列表查询StudentDto列表
+     *
      * @param studentIds
      * @return
      */

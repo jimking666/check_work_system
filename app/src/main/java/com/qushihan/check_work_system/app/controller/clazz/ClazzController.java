@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.qushihan.check_work_system.clazz.dto.ClazzDto;
 import com.qushihan.check_work_system.clazz.dto.GetClazzBySearchRequest;
 import com.qushihan.check_work_system.clazz.enums.CreateClazzStatus;
+import com.qushihan.check_work_system.clazz.enums.DeleteClazzStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -54,9 +55,14 @@ public class ClazzController {
      * @param response
      */
     @PostMapping("/delete")
-    public void deleteClazz(@RequestBody DeleteClazzRequest deleteClazzRequest, HttpServletResponse response) {
+    public void deleteClazz(@RequestBody DeleteClazzRequest deleteClazzRequest, HttpServletRequest request, HttpServletResponse response) {
         Long clazzId = TransitionUtil.stringToLong(deleteClazzRequest.getClazzId());
         String deleteMessge = clazzService.deleteClazz(clazzId);
+        if (deleteMessge.equals(DeleteClazzStatus.DELETE_SUCCESS.getMessage())) {
+            List<ClazzDto> clazzDtos = clazzService.queryAllClazz();
+            request.getServletContext().setAttribute("clazzDtos", clazzDtos);
+            request.getServletContext().setAttribute("searchClazzDtos", clazzDtos);
+        }
         PrintWriterUtil.print(deleteMessge, response);
     }
 
