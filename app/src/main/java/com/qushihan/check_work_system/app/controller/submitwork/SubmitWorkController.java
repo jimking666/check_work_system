@@ -40,7 +40,7 @@ public class SubmitWorkController {
     public void releaseWorkDetail(@RequestBody SubmitWorkDetailRequest submitWorkDetailRequest,
             HttpServletRequest request, HttpServletResponse response) {
         Long workId = TransitionUtil.stringToLong(submitWorkDetailRequest.getWorkId());
-        List<SubmitWorkDto> submitWorkDtos = submitWorkService.querySubmitWorkDtoListByWorkId(workId);
+        List<SubmitWorkDto> submitWorkDtos = submitWorkService.getByWorkId(workId);
         request.getServletContext().setAttribute("submitWorkDtos", submitWorkDtos);
         request.getServletContext().setAttribute("workId", workId);
         PrintWriterUtil.print("提交作业详情查询成功", response);
@@ -91,7 +91,7 @@ public class SubmitWorkController {
                 .map(StudentDto::getStudentId)
                 .collect(Collectors.toList());
         Long workId = (Long) request.getServletContext().getAttribute("workId");
-        List<SubmitWorkDto> submitWorkDtos = submitWorkService.querySubmitWorkDtoListByWorkId(workId);
+        List<SubmitWorkDto> submitWorkDtos = submitWorkService.getByWorkId(workId);
         submitWorkDtos = submitWorkDtos.stream()
                 .filter(submitWorkDto -> studentIds.contains(submitWorkDto.getStudentId()))
                 .collect(Collectors.toList());

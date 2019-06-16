@@ -26,9 +26,9 @@ public class SubmitWorkDao {
      *
      * @return
      */
-    public List<SubmitWork> querySubmitWorkListByWorkId(Long workId) {
+    public List<SubmitWork> getByWorkId(Long workId) {
         if (!Optional.ofNullable(workId).isPresent()) {
-            return Collections.EMPTY_LIST;
+            return Collections.emptyList();
         }
         SubmitWorkExample submitWorkExample = new SubmitWorkExample();
         SubmitWorkExample.Criteria criteria = submitWorkExample.createCriteria();
@@ -56,11 +56,12 @@ public class SubmitWorkDao {
     }
 
     /**
-     * 通过submitWorkId修改SubmitWork
+     * 通过submitWorkId修改SubmitWork记录
+     *
      * @param submitWork
      * @return
      */
-    public int editBySubmitWorkId(SubmitWork submitWork) {
+    public int updateBySubmitWorkId(SubmitWork submitWork) {
         if (!Optional.ofNullable(submitWork).map(SubmitWork::getSubmitWorkId).isPresent()) {
             return 0;
         }

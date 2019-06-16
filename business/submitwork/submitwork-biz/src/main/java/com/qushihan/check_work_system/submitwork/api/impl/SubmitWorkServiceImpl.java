@@ -33,10 +33,10 @@ public class SubmitWorkServiceImpl implements SubmitWorkService {
     private SubmitWorkBizService submitWorkBizService;
 
     @Override
-    public List<SubmitWorkDto> querySubmitWorkDtoListByWorkId(Long workId) {
-        List<SubmitWork> submitWorks = submitWorkDao.querySubmitWorkListByWorkId(workId);
+    public List<SubmitWorkDto> getByWorkId(Long workId) {
+        List<SubmitWork> submitWorks = submitWorkDao.getByWorkId(workId);
         if (CollectionUtils.isEmpty(submitWorks)) {
-            return Collections.EMPTY_LIST;
+            return Collections.emptyList();
         }
         List<Long> studentIds = submitWorks.stream()
                 .map(SubmitWork::getStudentId)
@@ -84,7 +84,12 @@ public class SubmitWorkServiceImpl implements SubmitWorkService {
            return "保存失败";
        }
        submitWorkDto.setScore(score);
-       submitWorkBizService.editBySubmitWorkId(submitWorkDto);
+       submitWorkBizService.updateBySubmitWorkId(submitWorkDto);
        return "保存成功";
+    }
+
+    @Override
+    public int updateBySubmitWorkId(SubmitWorkDto submitWorkDto) {
+        return submitWorkBizService.updateBySubmitWorkId(submitWorkDto);
     }
 }

@@ -1,6 +1,8 @@
 package com.qushihan.check_work_system.work.dao;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +26,10 @@ public class WorkDao {
      *
      * @return
      */
-    public List<Work> queryWorkListByCourseTeacherClazzId(Long courseTeacherClazzId) {
+    public List<Work> getByCourseTeacherClazzId(Long courseTeacherClazzId) {
+        if (!Optional.ofNullable(courseTeacherClazzId).isPresent()) {
+            return Collections.emptyList();
+        }
         WorkExample workExample = new WorkExample();
         WorkExample.Criteria criteria = workExample.createCriteria();
         criteria.andCourseTeacherClazzIdEqualTo(courseTeacherClazzId);
@@ -38,6 +43,9 @@ public class WorkDao {
      * @param work
      */
     public int createWork(Work work) {
+        if (!Optional.ofNullable(work).isPresent()) {
+            return 0;
+        }
         return workMapper.insertSelective(work);
     }
 
@@ -49,7 +57,13 @@ public class WorkDao {
      *
      * @return
      */
-    public List<Work> queryWorkListByWorkTitleAndWorkContent(String workTitle, String workContent) {
+    public List<Work> getByWorkTitleAndWorkContent(String workTitle, String workContent) {
+        if (StringUtils.isEmpty(workTitle)) {
+            return Collections.emptyList();
+        }
+        if (StringUtils.isEmpty(workContent)) {
+            return Collections.emptyList();
+        }
         WorkExample workExample = new WorkExample();
         WorkExample.Criteria criteria = workExample.createCriteria();
         criteria.andWorkTitleEqualTo(workTitle);
@@ -67,6 +81,12 @@ public class WorkDao {
      * @return
      */
     public int updateWorkByWorkId(Work work, Long workId) {
+        if (!Optional.ofNullable(work).isPresent()) {
+            return 0;
+        }
+        if (!Optional.ofNullable(workId).isPresent()) {
+            return 0;
+        }
         WorkExample workExample = new WorkExample();
         WorkExample.Criteria criteria = workExample.createCriteria();
         criteria.andWorkIdEqualTo(workId);

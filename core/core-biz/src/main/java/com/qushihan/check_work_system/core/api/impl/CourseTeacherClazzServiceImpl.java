@@ -121,4 +121,23 @@ public class CourseTeacherClazzServiceImpl implements CourseTeacherClazzService 
         }
         return groupCourseTeacherClazzDtoList(courseTeacherClazzes);
     }
+
+    @Override
+    public CourseTeacherClazzDto getByCourseTeacherClazzId(Long courseTeacherClazzId) {
+        List<CourseTeacherClazz> courseTeacherClazzes = courseTeacherClazzDao.getByCourseTeacherClazzId(courseTeacherClazzId);
+        if (CollectionUtils.isEmpty(courseTeacherClazzes)) {
+            return new CourseTeacherClazzDto();
+        }
+        List<CourseTeacherClazzDto> courseTeacherClazzDtos = groupCourseTeacherClazzDtoList(courseTeacherClazzes);
+        return courseTeacherClazzDtos.stream()
+                .findFirst()
+                .orElse(new CourseTeacherClazzDto());
+    }
+
+    @Override
+    public int updateByCourseTeacherClazzId(CourseTeacherClazzDto courseTeacherClazzDto) {
+        CourseTeacherClazz courseTeacherClazz = new CourseTeacherClazz();
+        BeanUtils.copyProperties(courseTeacherClazzDto, courseTeacherClazz);
+        return courseTeacherClazzDao.updateByCourseTeacherClazzId(courseTeacherClazz);
+    }
 }

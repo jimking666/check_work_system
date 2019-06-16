@@ -31,7 +31,15 @@
             })
             // 回到作业管理页面
             $("#goBackWorkManagement").click(function () {
-                window.location = "/workManagement"
+                $.ajax({
+                    url: '/courseTeacherClazz/refreshData',
+                    type: 'get',
+                    statusCode: {
+                        200: function () {
+                            window.location = "/workManagement"
+                        }
+                    }
+                })
             })
             // 点击退出登陆触发事件
             $("#logout").click(function () {
@@ -39,13 +47,12 @@
                     url: '/teacher/logout',
                     type: 'get',
                     statusCode: {
-                        200: function (data) {
+                        200: function () {
                             window.location = "/"
                         }
                     }
                 })
             })
-
             // 搜索作业
             $("#searchWork").click(function () {
                 $.ajax({

@@ -9,10 +9,7 @@ import com.qushihan.check_work_system.course.api.CourseService;
 import com.qushihan.check_work_system.course.dto.CourseDto;
 import com.qushihan.check_work_system.teacher.dto.TeacherDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.qushihan.check_work_system.app.util.PrintWriterUtil;
 import com.qushihan.check_work_system.core.api.CourseTeacherClazzService;
@@ -72,7 +69,7 @@ public class CourseTeacherClazzController {
      * @param request
      * @param response
      */
-    @RequestMapping("/getCourseTeacherClazzBySearch")
+    @PostMapping("/getCourseTeacherClazzBySearch")
     public void getCourseTeacherClazzBySearch(@RequestBody GetCourseTeacherClazzBySearchRequest getCourseTeacherClazzBySearchRequest, HttpServletRequest request, HttpServletResponse response) {
         String searchCourseName = getCourseTeacherClazzBySearchRequest.getSearchCourseName();
         List<CourseDto> courseDtos = courseService.getBySearchCourseName(searchCourseName);
@@ -86,5 +83,13 @@ public class CourseTeacherClazzController {
                 .collect(Collectors.toList());
         request.getServletContext().setAttribute("courseTeacherClazzDtos", courseTeacherClazzDtos);
         PrintWriterUtil.print("查询成功", response);
+    }
+
+    @GetMapping(value = "/refreshData")
+    public void refreshData(HttpServletRequest request, HttpServletResponse response) {
+        TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
+        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherDto.getTeacherId());
+        request.getServletContext().setAttribute("courseTeacherClazzDtos", courseTeacherClazzDtos);
+        PrintWriterUtil.print("刷新成功", response);
     }
 }

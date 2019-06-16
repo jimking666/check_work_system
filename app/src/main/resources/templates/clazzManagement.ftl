@@ -612,6 +612,9 @@
                             <td>${clazzDto.createTime?string("yyyy-MM-dd")}</td>
                             <#if teacherDto??>
                                 <td>
+                                    <button class="btn btn-default"
+                                            onclick="studentDetail('${clazzDto.clazzId}')">学生详情
+                                    </button>
                                     <#if rightLevel == 1>
                                         <button class="btn btn-danger" onclick="addClazzId('${clazzDto.clazzId}')"
                                                 data-toggle="modal"
@@ -619,9 +622,6 @@
                                             删除
                                         </button>
                                     </#if>
-                                    <button class="btn btn-default"
-                                            onclick="studentDetail('${clazzDto.clazzId}')">学生详情
-                                    </button>
                                 </td>
                             </#if>
                         </tr>

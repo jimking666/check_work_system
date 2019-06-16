@@ -32,10 +32,10 @@ public interface WorkService {
      * 删除作业
      *
      * @param workId
-     *
+     * @param courseTeacherClazzId
      * @return
      */
-    String deleteWork(Long workId);
+    String deleteWork(Long workId, Long courseTeacherClazzId);
 
     /**
      * 通过搜索作业题目名称获取作业

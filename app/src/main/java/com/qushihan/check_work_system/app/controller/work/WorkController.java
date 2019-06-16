@@ -74,9 +74,10 @@ public class WorkController {
      * @param response
      */
     @PostMapping("/delete")
-    public void deleteWork(@RequestBody DeleteWorkRequest deleteWorkRequest, HttpServletResponse response) {
+    public void deleteWork(@RequestBody DeleteWorkRequest deleteWorkRequest, HttpServletRequest request ,HttpServletResponse response) {
         Long workId = TransitionUtil.stringToLong(deleteWorkRequest.getWorkId());
-        String deleteMessge = workService.deleteWork(workId);
+        Long courseTeacherClazzId = (Long) request.getServletContext().getAttribute("courseTeacherClazzId");
+        String deleteMessge = workService.deleteWork(workId, courseTeacherClazzId);
         PrintWriterUtil.print(deleteMessge, response);
     }
 

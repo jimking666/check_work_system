@@ -4,7 +4,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.qushihan.check_work_system.core.dto.CourseTeacherClazzDto;
 import com.qushihan.check_work_system.inf.util.GetIdUtil;
+import com.qushihan.check_work_system.submitwork.api.SubmitWorkService;
+import com.qushihan.check_work_system.submitwork.dto.SubmitWorkDto;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,11 +30,14 @@ public class WorkServiceImpl implements WorkService {
     private WorkDao workDao;
 
     @Autowired
+    private SubmitWorkService submitWorkService;
+
+    @Autowired
     private CourseTeacherClazzService courseTeacherClazzService;
 
     @Override
     public List<WorkDto> queryWorkDtoListByCourseTeacherClazzId(Long courseTeacherClazzId) {
-        List<Work> works = workDao.queryWorkListByCourseTeacherClazzId(courseTeacherClazzId);
+        List<Work> works = workDao.getByCourseTeacherClazzId(courseTeacherClazzId);
         if (CollectionUtils.isEmpty(works)) {
             return Collections.EMPTY_LIST;
         }
@@ -47,7 +53,7 @@ public class WorkServiceImpl implements WorkService {
     @Transactional(rollbackFor = RuntimeException.class)
     public String createWork(String workTitle, String workContent, Float repetitiveRate, Long courseTeacherClazzId) {
         // 先查重复
-        if (!CollectionUtils.isEmpty(workDao.queryWorkListByWorkTitleAndWorkContent(workTitle, workContent))) {
+        if (!CollectionUtils.isEmpty(workDao.getByWorkTitleAndWorkContent(workTitle, workContent))) {
             return CreateWorkStatus.REPEAT_CREATE_FAIL.getMessage();
         }
         // 若不重复则插入
@@ -65,10 +71,23 @@ public class WorkServiceImpl implements WorkService {
     }
 
     @Override
-    public String deleteWork(Long workId) {
+    @Transactional(rollbackFor = Exception.class)
+    public String deleteWork(Long workId, Long courseTeacherClazzId) {
+        // 软删除该作业下的提交作业
+        List<SubmitWorkDto> submitWorkDtos = submitWorkService.getByWorkId(workId);
+        submitWorkDtos = submitWorkDtos.stream()
+                .map(submitWorkDto -> submitWorkDto.setIsdel(FieldIsdelStatus.ISDEL_TRUE.getIsdel()))
+                .collect(Collectors.toList());
+        submitWorkDtos.forEach(submitWorkDto -> submitWorkService.updateBySubmitWorkId(submitWorkDto));
+        // 软删除该作业
         Work work = new Work();
         work.setIsdel(FieldIsdelStatus.ISDEL_TRUE.getIsdel());
         workDao.updateWorkByWorkId(work, workId);
+        // 作业数量减一
+        CourseTeacherClazzDto courseTeacherClazzDto = courseTeacherClazzService.getByCourseTeacherClazzId(courseTeacherClazzId);
+        List<Work> works = workDao.getByCourseTeacherClazzId(courseTeacherClazzId);
+        courseTeacherClazzDto.setWorkCount((long) works.size());
+        courseTeacherClazzService.updateByCourseTeacherClazzId(courseTeacherClazzDto);
         return DeleteWorkStatus.DELETE_SUCCESS.getMessage();
     }
 

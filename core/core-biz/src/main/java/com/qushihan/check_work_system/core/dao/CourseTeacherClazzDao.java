@@ -165,4 +165,39 @@ public class CourseTeacherClazzDao {
         criteria.andClazzIdEqualTo(clazzId);
         return courseTeacherClazzMapper.selectByExample(courseTeacherClazzExample);
     }
+
+    /**
+     * 通过课程教师班级id查询课程教师班级记录
+     *
+     * @param courseTeacherClazzId
+     * @return
+     */
+    public List<CourseTeacherClazz> getByCourseTeacherClazzId(Long courseTeacherClazzId) {
+        if (!Optional.ofNullable(courseTeacherClazzId).isPresent()) {
+            return Collections.emptyList();
+        }
+        CourseTeacherClazzExample courseTeacherClazzExample = new CourseTeacherClazzExample();
+        CourseTeacherClazzExample.Criteria criteria = courseTeacherClazzExample.createCriteria();
+        criteria.andCourseTeacherClazzIdEqualTo(courseTeacherClazzId);
+        criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
+        return courseTeacherClazzMapper.selectByExample(courseTeacherClazzExample);
+    }
+
+    /**
+     * 通过课程教师班级id更改课程教师班级记录
+     *
+     * @param courseTeacherClazz
+     * @return
+     */
+    public int updateByCourseTeacherClazzId(CourseTeacherClazz courseTeacherClazz) {
+        if (!Optional.ofNullable(courseTeacherClazz).isPresent()) {
+            return 0;
+        }
+        CourseTeacherClazzExample courseTeacherClazzExample = new CourseTeacherClazzExample();
+        CourseTeacherClazzExample.Criteria criteria = courseTeacherClazzExample.createCriteria();
+        criteria.andCourseTeacherClazzIdEqualTo(courseTeacherClazz.getCourseTeacherClazzId());
+        criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
+        return courseTeacherClazzMapper.updateByExampleSelective(courseTeacherClazz, courseTeacherClazzExample);
+    }
+
 }

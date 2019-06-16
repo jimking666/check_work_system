@@ -38,15 +38,16 @@ public class SubmitWorkBizService {
 
     /**
      * 通过submitWorkId修改SubmitWorkDto
+     *
      * @param submitWorkDto
      * @return
      */
-    public int editBySubmitWorkId(SubmitWorkDto submitWorkDto) {
+    public int updateBySubmitWorkId(SubmitWorkDto submitWorkDto) {
         if (!Optional.ofNullable(submitWorkDto).isPresent()) {
             return 0;
         }
         SubmitWork submitWork = new SubmitWork();
         BeanUtils.copyProperties(submitWorkDto, submitWork);
-        return submitWorkDao.editBySubmitWorkId(submitWork);
+        return submitWorkDao.updateBySubmitWorkId(submitWork);
     }
 }

@@ -23,12 +23,6 @@ import com.qushihan.check_work_system.teacher.dto.TeacherDto;
 public class IndexController {
 
     @Autowired
-    private CourseService courseService;
-
-    @Autowired
-    private ClazzService clazzService;
-
-    @Autowired
     private CourseTeacherClazzService courseTeacherClazzService;
 
     /**

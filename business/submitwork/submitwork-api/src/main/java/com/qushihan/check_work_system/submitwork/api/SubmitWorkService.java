@@ -13,7 +13,7 @@ public interface SubmitWorkService {
      *
      * @return
      */
-    List<SubmitWorkDto> querySubmitWorkDtoListByWorkId(Long workId);
+    List<SubmitWorkDto> getByWorkId(Long workId);
 
     /**
      * 通过提交作业id获取提交作业内容和分数
@@ -31,4 +31,12 @@ public interface SubmitWorkService {
      * @return
      */
     String saveScoreBySubmitWorkId(Long submitWorkId, Integer score);
+
+    /**
+     * 通过提交作业id修改提交作业记录
+     *
+     * @param submitWorkDto
+     * @return
+     */
+    int updateBySubmitWorkId(SubmitWorkDto submitWorkDto);
 }

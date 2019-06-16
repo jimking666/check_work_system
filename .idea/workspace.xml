@@ -3,41 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="a0a978ed-af39-4987-8c2a-a260de65e57a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/clazz/ClazzController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/clazz/ClazzController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/student/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/student/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/courseTeacherClazz/CourseTeacherClazzController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/courseTeacherClazz/CourseTeacherClazzController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/index/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/index/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/submitwork/SubmitWorkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/submitwork/SubmitWorkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/work/WorkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/work/WorkController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/clazzManagement.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/clazzManagement.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/courseManagement.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/courseManagement.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/workManagement.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/workManagement.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/clazz/clazz-api/src/main/java/com/qushihan/check_work_system/clazz/api/ClazzService.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/clazz/clazz-api/src/main/java/com/qushihan/check_work_system/clazz/api/ClazzService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/clazz/clazz-api/src/main/java/com/qushihan/check_work_system/clazz/enums/DeleteClazzStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/clazz/clazz-api/src/main/java/com/qushihan/check_work_system/clazz/enums/DeleteClazzStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/clazz/clazz-api/target/classes/com/qushihan/check_work_system/clazz/api/ClazzService.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/clazz/clazz-api/target/classes/com/qushihan/check_work_system/clazz/api/ClazzService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/clazz/clazz-api/target/classes/com/qushihan/check_work_system/clazz/enums/DeleteClazzStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/clazz/clazz-api/target/classes/com/qushihan/check_work_system/clazz/enums/DeleteClazzStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/clazz/clazz-biz/src/main/java/com/qushihan/check_work_system/clazz/api/impl/ClazzServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/clazz/clazz-biz/src/main/java/com/qushihan/check_work_system/clazz/api/impl/ClazzServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/clazz/clazz-biz/src/main/java/com/qushihan/check_work_system/clazz/dao/ClazzDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/clazz/clazz-biz/src/main/java/com/qushihan/check_work_system/clazz/dao/ClazzDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/business/clazz/clazz-biz/target/classes/com/qushihan/check_work_system/clazz/api/impl/ClazzServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/clazz/clazz-biz/target/classes/com/qushihan/check_work_system/clazz/api/impl/ClazzServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/clazz/clazz-biz/target/classes/com/qushihan/check_work_system/clazz/dao/ClazzDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/clazz/clazz-biz/target/classes/com/qushihan/check_work_system/clazz/dao/ClazzDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/student/student-api/src/main/java/com/qushihan/check_work_system/student/api/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/student/student-api/src/main/java/com/qushihan/check_work_system/student/api/StudentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/business/student/student-api/target/classes/com/qushihan/check_work_system/student/api/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/student/student-api/target/classes/com/qushihan/check_work_system/student/api/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/api/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/api/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/mapper/biz/StudentBizMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/mapper/biz/StudentBizMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/business/student/student-biz/target/classes/com/qushihan/check_work_system/student/api/impl/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/student/student-biz/target/classes/com/qushihan/check_work_system/student/api/impl/StudentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/student/student-biz/target/classes/com/qushihan/check_work_system/student/dao/StudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/business/student/student-biz/target/classes/com/qushihan/check_work_system/student/dao/StudentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/student/student-biz/target/classes/com/qushihan/check_work_system/student/mapper/biz/StudentBizMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/student/student-biz/target/classes/com/qushihan/check_work_system/student/mapper/biz/StudentBizMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/api/ClazzStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/api/ClazzStudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/submitwork/submitwork-api/src/main/java/com/qushihan/check_work_system/submitwork/api/SubmitWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/submitwork/submitwork-api/src/main/java/com/qushihan/check_work_system/submitwork/api/SubmitWorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/api/impl/SubmitWorkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/api/impl/SubmitWorkServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/biz/service/SubmitWorkBizService.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/biz/service/SubmitWorkBizService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/dao/SubmitWorkDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/dao/SubmitWorkDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/work/work-api/src/main/java/com/qushihan/check_work_system/work/api/WorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/work/work-api/src/main/java/com/qushihan/check_work_system/work/api/WorkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/work/work-biz/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/business/work/work-biz/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/dao/WorkDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/dao/WorkDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/api/CourseTeacherClazzService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/api/CourseTeacherClazzService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core-api/target/classes/com/qushihan/check_work_system/core/api/ClazzStudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-api/target/classes/com/qushihan/check_work_system/core/api/ClazzStudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core-api/target/classes/com/qushihan/check_work_system/core/api/CourseTeacherClazzService.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-api/target/classes/com/qushihan/check_work_system/core/api/CourseTeacherClazzService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/api/impl/ClazzStudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/api/impl/ClazzStudentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/api/impl/CourseTeacherClazzServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/api/impl/CourseTeacherClazzServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/dao/ClazzStudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/dao/ClazzStudentDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/dao/CourseTeacherClazzDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/dao/CourseTeacherClazzDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core-biz/target/classes/com/qushihan/check_work_system/core/api/impl/ClazzStudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-biz/target/classes/com/qushihan/check_work_system/core/api/impl/ClazzStudentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core-biz/target/classes/com/qushihan/check_work_system/core/api/impl/CourseTeacherClazzServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-biz/target/classes/com/qushihan/check_work_system/core/api/impl/CourseTeacherClazzServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core-biz/target/classes/com/qushihan/check_work_system/core/dao/ClazzStudentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-biz/target/classes/com/qushihan/check_work_system/core/dao/ClazzStudentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core-biz/target/classes/com/qushihan/check_work_system/core/dao/CourseTeacherClazzDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-biz/target/classes/com/qushihan/check_work_system/core/dao/CourseTeacherClazzDao.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/app/target/" />
@@ -76,100 +62,91 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/clazz/clazz-biz/src/main/java/com/qushihan/check_work_system/clazz/api/impl/ClazzServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/clazzManagement.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="93" column="32" lean-forward="true" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
+            <state relative-caret-position="168">
+              <caret line="616" column="45" selection-start-line="616" selection-start-column="45" selection-end-line="616" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/api/impl/StudentServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="53" column="28" lean-forward="true" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+            <state relative-caret-position="296">
+              <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/student/student-api/src/main/java/com/qushihan/check_work_system/student/api/StudentService.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/courseManagement.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+            <state relative-caret-position="240">
+              <caret line="616" selection-start-line="616" selection-end-line="617" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/teacher/TeacherController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="95" column="12" lean-forward="true" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="117" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="34" column="57" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/dao/StudentDao.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/courseTeacherClazz/CourseTeacherClazzController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="432">
+              <caret line="90" column="127" selection-start-line="90" selection-start-column="127" selection-end-line="90" selection-end-column="127" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/clazz/ClazzController.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/index/IndexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="59" column="48" lean-forward="true" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
+            <state relative-caret-position="432">
+              <caret line="105" column="5" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/api/impl/ClazzStudentServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/workManagement.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+            <state relative-caret-position="-600">
+              <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/api/ClazzStudentService.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/login.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="384">
+              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/dao/ClazzStudentDao.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/config/WebMvcConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/dto/ClazzStudentDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/dto/CourseTeacherClazzDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1152">
-              <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="53" selection-end-column="7" />
+            <state relative-caret-position="120">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -188,9 +165,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>updateByExampleSelective</find>
-      <find>批改</find>
-      <find>写作业</find>
       <find>data.sp</find>
       <find>重复率</find>
       <find>.gite</find>
@@ -214,10 +188,13 @@
       <find>createCourse</find>
       <find>createClazz</find>
       <find>courseDtos</find>
-      <find>shanchukechengjiaoshibanji</find>
       <find>deleteCourse</find>
-      <find>删除</find>
       <find>deleteClazz</find>
+      <find>shanchukechengjiaoshibanji</find>
+      <find>删除</find>
+      <find>deleteCourseTeacherClazz</find>
+      <find>window.location = &quot;/workManagement&quot;</find>
+      <find>goBackWorkManagement</find>
     </findStrings>
     <replaceStrings>
       <replace>work_submit_system.</replace>
@@ -229,22 +206,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/business/work/work-biz/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/core/core-biz/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/courseTeacherClazz/CourseTeacherClazzController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/resources/templates/clazzStudentDetail.ftl" />
-        <option value="$PROJECT_DIR$/app/src/main/resources/templates/submitWorkDetail.ftl" />
-        <option value="$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/dto/LoginTeacherRequest.java" />
-        <option value="$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/enums/JudgeLoginStatus.java" />
         <option value="$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/dto/RegisterTeacherRequest.java" />
         <option value="$PROJECT_DIR$/inf/src/main/java/com/qushihan/check_work_system/inf/util/GetIdUtil.java" />
         <option value="$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/util/TeacherUtil.java" />
         <option value="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/util/WorkUtil.java" />
-        <option value="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.java" />
         <option value="$PROJECT_DIR$/app/src/main/resources/templates/login.ftl" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/submitwork/SubmitWorkController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/work/WorkController.java" />
         <option value="$PROJECT_DIR$/app/src/main/resources/templates/register.ftl" />
         <option value="$PROJECT_DIR$/business/teacher/teacher-biz/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/dao/TeacherDao.java" />
@@ -255,31 +221,42 @@
         <option value="$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/api/impl/TeacherRightServiceImpl.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/teacher/TeacherController.java" />
         <option value="$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/dto/TeacherRightDto.java" />
-        <option value="$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl" />
         <option value="$PROJECT_DIR$/business/course/course-api/src/main/java/com/qushihan/check_work_system/course/enums/DeleteCourseStatus.java" />
         <option value="$PROJECT_DIR$/business/course/course-biz/src/main/java/com/qushihan/check_work_system/course/dao/CourseDao.java" />
         <option value="$PROJECT_DIR$/business/course/course-biz/src/main/java/com/qushihan/check_work_system/course/api/impl/CourseServiceImpl.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/course/CourseController.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/clazz/ClazzController.java" />
         <option value="$PROJECT_DIR$/business/clazz/clazz-api/src/main/java/com/qushihan/check_work_system/clazz/enums/DeleteClazzStatus.java" />
-        <option value="$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/api/CourseTeacherClazzService.java" />
-        <option value="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/dao/CourseTeacherClazzDao.java" />
-        <option value="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/api/impl/CourseTeacherClazzServiceImpl.java" />
         <option value="$PROJECT_DIR$/business/clazz/clazz-api/src/main/java/com/qushihan/check_work_system/clazz/api/ClazzService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/student/StudentController.java" />
         <option value="$PROJECT_DIR$/business/clazz/clazz-biz/src/main/java/com/qushihan/check_work_system/clazz/dao/ClazzDao.java" />
         <option value="$PROJECT_DIR$/app/src/main/resources/templates/workManagement.ftl" />
-        <option value="$PROJECT_DIR$/app/src/main/resources/templates/courseManagement.ftl" />
-        <option value="$PROJECT_DIR$/app/src/main/resources/templates/clazzManagement.ftl" />
         <option value="$PROJECT_DIR$/business/clazz/clazz-biz/pom.xml" />
         <option value="$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/dto/ClazzStudentDto.java" />
         <option value="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/dao/ClazzStudentDao.java" />
         <option value="$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/api/ClazzStudentService.java" />
         <option value="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/api/impl/ClazzStudentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/dao/StudentDao.java" />
+        <option value="$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/api/impl/StudentServiceImpl.java" />
         <option value="$PROJECT_DIR$/business/student/student-api/src/main/java/com/qushihan/check_work_system/student/api/StudentService.java" />
         <option value="$PROJECT_DIR$/business/clazz/clazz-biz/src/main/java/com/qushihan/check_work_system/clazz/api/impl/ClazzServiceImpl.java" />
-        <option value="$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/api/impl/StudentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/dao/StudentDao.java" />
+        <option value="$PROJECT_DIR$/app/src/main/resources/templates/courseManagement.ftl" />
+        <option value="$PROJECT_DIR$/app/src/main/resources/templates/clazzManagement.ftl" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/submitwork/SubmitWorkController.java" />
+        <option value="$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/biz/service/SubmitWorkBizService.java" />
+        <option value="$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/api/impl/SubmitWorkServiceImpl.java" />
+        <option value="$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/dao/SubmitWorkDao.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/work/WorkController.java" />
+        <option value="$PROJECT_DIR$/business/work/work-api/src/main/java/com/qushihan/check_work_system/work/api/WorkService.java" />
+        <option value="$PROJECT_DIR$/business/submitwork/submitwork-api/src/main/java/com/qushihan/check_work_system/submitwork/api/SubmitWorkService.java" />
+        <option value="$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/api/CourseTeacherClazzService.java" />
+        <option value="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/api/impl/CourseTeacherClazzServiceImpl.java" />
+        <option value="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/dao/CourseTeacherClazzDao.java" />
+        <option value="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/dao/WorkDao.java" />
+        <option value="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/index/IndexController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/courseTeacherClazz/CourseTeacherClazzController.java" />
       </list>
     </option>
   </component>
@@ -412,6 +389,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1022,6 +1000,63 @@
               <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
               <item name="business" type="462c0819:PsiDirectoryNode" />
               <item name="submitwork" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork" type="462c0819:PsiDirectoryNode" />
               <item name="submitwork-biz" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -1040,6 +1075,51 @@
               <item name="submitwork-biz" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork-biz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork-biz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork-biz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork-biz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="submitwork" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
@@ -1246,6 +1326,51 @@
               <item name="work-biz" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="work-biz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="work-biz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="work-biz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="check_work_system" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="work-biz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="work" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="check_work_system" type="b2602c69:ProjectViewProjectNode" />
@@ -1456,7 +1581,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1468,7 +1592,7 @@
     <property name="SearchEverywhereHistoryKey" value="DeleteCourse&#9;FILE&#9;file://C:/Users/JimKing/IdeaProjects/check_work_system/business/course/course-api/src/main/java/com/qushihan/check_work_system/course/enums/DeleteCourseStatus.java&#10;DeletCourse&#9;PSI&#9;JAVA://com.qushihan.check_work_system.course.dto.DeleteCourseRequest&#10;WorkServiceImpl&#9;FILE&#9;file://C:/Users/JimKing/IdeaProjects/check_work_system/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.java&#10;WorkU&#9;FILE&#9;file://C:/Users/JimKing/IdeaProjects/check_work_system/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/util/WorkUtil.java&#10;teacherU&#9;FILE&#9;file://C:/Users/JimKing/IdeaProjects/check_work_system/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/util/TeacherUtil.java&#10;TeacherUtil&#9;PSI&#9;JAVA://com.qushihan.check_work_system.teacher.util.TeacherUtil&#10;CourseTeacherClazzU&#9;PSI&#9;JAVA://com.qushihan.check_work_system.core.util.CourseTeacherClazzUtil&#10;CourseU&#9;PSI&#9;JAVA://com.qushihan.check_work_system.course.util.CourseUtil&#10;Request&#9;PSI&#9;JAVA://com.qushihan.check_work_system.clazz.dto.CreateClazzRequest&#10;work&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/biyesheji/check_work_system/.idea/workspace.xml&#10;gitignore&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/biyesheji/check_work_system/app/.gitignore&#10;workSpa&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/biyesheji/check_work_system/.idea/workspace.xml&#10;Work&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/business/work/work-api/src/main/java/com/qushihan/check_work_system/work/dto/WorkDto.java&#10;SubmitWorkDto&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/business/submitwork/submitwork-api/src/main/java/com/qushihan/check_work_system/submitwork/dto/SubmitWorkDto.java&#10;WorkDto&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/business/work/work-api/src/main/java/com/qushihan/check_work_system/work/dto/WorkDto.java&#10;SubmitWork&#9;PSI&#9;JAVA://com.qushihan.check_work_system.submitwork.model.auto.SubmitWork&#10;CreateCourseStatus&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/core/core-api/src/main/java/com/qushihan/check_work_system/core/enums/CreateCourseTeacherClazzStatus.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560505435787" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560665072424" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -1569,18 +1693,20 @@
       <workItem from="1560477072725" duration="4034000" />
       <workItem from="1560496640042" duration="8678000" />
       <workItem from="1560505780629" duration="1696000" />
-      <workItem from="1560516829226" duration="1423000" />
+      <workItem from="1560516829226" duration="2414000" />
+      <workItem from="1560574785889" duration="1328000" />
+      <workItem from="1560641038935" duration="15020000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="335709000" />
+    <option name="totallyTimeSpent" value="353048000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1721" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28683102" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20978552" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1591,15 +1717,15 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.4251825" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5529197" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" weight="0.552822" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32846716" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3448905" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3299566" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.31751823" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.552822" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.316932" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
@@ -1625,142 +1751,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/business/course/course-api/src/main/java/com/qushihan/check_work_system/course/api/CourseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/index/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="66" column="14" lean-forward="true" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/clazz/clazz-biz/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144">
-          <caret selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/clazz/clazz-biz/src/main/java/com/qushihan/check_work_system/clazz/mapper/auto/ClazzMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
-          <caret line="60" column="31" lean-forward="true" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/teacher/teacher-biz/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="889">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/model/auto/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" selection-start-line="4" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/dto/TeacherDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/dao/TeacherDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/model/auto/TeacherRight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/api/impl/TeacherServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/dao/TeacherRightDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/api/TeacherService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/api/TeacherRightService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/api/impl/TeacherRightServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inf/src/main/java/com/qushihan/check_work_system/inf/util/GetIdUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/teacher/TeacherController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="107" column="77" selection-start-line="107" selection-start-column="67" selection-end-line="107" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/teacher/teacher-api/src/main/java/com/qushihan/check_work_system/teacher/dto/TeacherRightDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/course/course-biz/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/course/course-biz/src/main/java/com/qushihan/check_work_system/course/dao/CourseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="86" column="28" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/course/CourseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="58" selection-start-line="58" selection-end-line="63" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/business/course/course-api/src/main/java/com/qushihan/check_work_system/course/dto/DeleteCourseRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1782,20 +1772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/api/CourseTeacherClazzService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/dao/CourseTeacherClazzDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="157" column="41" selection-start-line="157" selection-start-column="41" selection-end-line="157" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/business/student/student-api/src/main/java/com/qushihan/check_work_system/student/dto/StudentDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-504">
@@ -1803,24 +1779,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/api/impl/CourseTeacherClazzServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="79" column="57" selection-start-line="79" selection-start-column="57" selection-end-line="79" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/business/clazz/clazz-api/src/main/java/com/qushihan/check_work_system/clazz/api/ClazzService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/student/StudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -1847,13 +1809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="297" column="53" lean-forward="true" selection-start-line="297" selection-start-column="53" selection-end-line="297" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/business/clazz/clazz-biz/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1200">
@@ -1864,31 +1819,172 @@
     <entry file="file://$PROJECT_DIR$/business/clazz/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/workManagement.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6864">
-          <caret line="286" column="30" selection-start-line="286" selection-start-column="30" selection-end-line="290" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/courseManagement.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6864">
-          <caret line="286" column="30" selection-start-line="286" selection-start-column="30" selection-end-line="286" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/clazzManagement.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6840">
-          <caret line="285" column="62" selection-start-line="285" selection-start-column="62" selection-end-line="285" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/business/clazz/clazz-api/src/main/java/com/qushihan/check_work_system/clazz/enums/DeleteClazzStatus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/api/ClazzStudentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/dto/ClazzStudentDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/clazz/clazz-biz/src/main/java/com/qushihan/check_work_system/clazz/api/impl/ClazzServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1536">
+          <caret line="88" column="23" selection-start-line="88" selection-start-column="23" selection-end-line="88" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/register.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1872">
+          <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/clazz/ClazzController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/dao/ClazzStudentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/dao/TeacherDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/api/impl/TeacherServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/student/student-api/src/main/java/com/qushihan/check_work_system/student/api/StudentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/dao/StudentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="78" column="33" lean-forward="true" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/api/impl/StudentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/student/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/submitWorkDetail.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3127">
+          <caret line="120" column="30" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/work/work-biz/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-792" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/submitwork/SubmitWorkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="93" column="66" selection-start-line="93" selection-start-column="66" selection-end-line="93" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/submitwork/submitwork-api/src/main/java/com/qushihan/check_work_system/submitwork/dto/SubmitWorkDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/dao/SubmitWorkDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="63" column="23" lean-forward="true" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/biz/service/SubmitWorkBizService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/api/impl/SubmitWorkServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="91" column="26" lean-forward="true" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/work/WorkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="79" column="47" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/work/work-api/src/main/java/com/qushihan/check_work_system/work/api/WorkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/submitwork/submitwork-api/src/main/java/com/qushihan/check_work_system/submitwork/api/SubmitWorkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="40" column="58" lean-forward="true" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/api/CourseTeacherClazzService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="67" column="35" lean-forward="true" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1899,75 +1995,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/api/ClazzStudentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/dto/ClazzStudentDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/core-api/src/main/java/com/qushihan/check_work_system/core/dto/CourseTeacherClazzDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="53" selection-end-column="7" />
+        <state relative-caret-position="-792">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/dao/ClazzStudentDao.java">
+    <entry file="file://$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/dao/CourseTeacherClazzDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+        <state relative-caret-position="108">
+          <caret line="191" column="38" lean-forward="true" selection-start-line="191" selection-start-column="38" selection-end-line="191" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/clazz/ClazzController.java">
+    <entry file="file://$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/api/impl/CourseTeacherClazzServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="59" column="48" lean-forward="true" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
+        <state relative-caret-position="108">
+          <caret line="137" column="33" lean-forward="true" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/business/student/student-api/src/main/java/com/qushihan/check_work_system/student/api/StudentService.java">
+    <entry file="file://$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/dao/WorkDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        <state relative-caret-position="132">
+          <caret line="28" column="35" lean-forward="true" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/business/clazz/clazz-biz/src/main/java/com/qushihan/check_work_system/clazz/api/impl/ClazzServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="93" column="32" lean-forward="true" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
+        <state relative-caret-position="296">
+          <caret line="87" column="35" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/api/impl/StudentServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/clazzManagement.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="53" column="28" lean-forward="true" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+        <state relative-caret-position="168">
+          <caret line="616" column="45" selection-start-line="616" selection-start-column="45" selection-end-line="616" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/dao/StudentDao.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/courseManagement.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="616" selection-start-line="616" selection-end-line="617" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/config/WebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/login.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/workManagement.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-600">
+          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/index/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="105" column="5" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="34" column="57" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/teacher/TeacherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="95" column="12" lean-forward="true" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/courseTeacherClazz/CourseTeacherClazzController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="90" column="127" selection-start-line="90" selection-start-column="127" selection-end-line="90" selection-end-column="127" />
         </state>
       </provider>
     </entry>
