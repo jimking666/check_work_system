@@ -4,9 +4,14 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.qushihan.check_work_system.submitwork.api.SubmitWorkService;
+import com.qushihan.check_work_system.submitwork.dto.SubmitWorkDto;
+import com.qushihan.check_work_system.work.api.WorkService;
+import com.qushihan.check_work_system.work.dto.WorkDto;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import com.qushihan.check_work_system.clazz.api.ClazzService;
@@ -38,6 +43,12 @@ public class CourseTeacherClazzServiceImpl implements CourseTeacherClazzService 
 
     @Autowired
     private ClazzService clazzService;
+
+    @Autowired
+    private WorkService workService;
+
+    @Autowired
+    private SubmitWorkService submitWorkService;
 
     @Override
     public String createCourseTeacherClazz(Long courseId, Long teacherId, Long clazzId) {
@@ -86,8 +97,27 @@ public class CourseTeacherClazzServiceImpl implements CourseTeacherClazzService 
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public String deleteCourseTeacherClazz(Long courseTeacherClazzId) {
-        courseTeacherClazzDao.deleteCourseTeacherClazzByCourseTeacherClazzId(courseTeacherClazzId);
+        // 软删除课程教师班级下的所有作业下的所有提交作业
+        List<WorkDto> workDtos = workService.getByCourseTeacherClazzId(courseTeacherClazzId);
+        List<Long> workIds = workDtos.stream()
+                .map(WorkDto::getWorkId)
+                .collect(Collectors.toList());
+        List<SubmitWorkDto> submitWorkDtos = submitWorkService.getByWorkIds(workIds);
+        submitWorkDtos = submitWorkDtos.stream()
+                .map(submitWorkDto -> submitWorkDto.setIsdel(FieldIsdelStatus.ISDEL_TRUE.getIsdel()))
+                .collect(Collectors.toList());
+        submitWorkDtos.forEach(submitWorkDto -> submitWorkService.updateBySubmitWorkId(submitWorkDto));
+        // 软删除课程教师班级下的所有作业
+        workDtos = workDtos.stream()
+                .map(workDto -> workDto.setIsdel(FieldIsdelStatus.ISDEL_TRUE.getIsdel()))
+                .collect(Collectors.toList());
+        workDtos.forEach(workDto -> workService.updateByWorkId(workDto));
+        // 软删除课程教室班级
+        CourseTeacherClazzDto courseTeacherClazzDto = getByCourseTeacherClazzId(courseTeacherClazzId);
+        courseTeacherClazzDto.setIsdel(FieldIsdelStatus.ISDEL_TRUE.getIsdel());
+        updateByCourseTeacherClazzId(courseTeacherClazzDto);
         return DeleteCourseTeacherClazzStatus.DELETE_SUCCESS.getMessage();
     }
 

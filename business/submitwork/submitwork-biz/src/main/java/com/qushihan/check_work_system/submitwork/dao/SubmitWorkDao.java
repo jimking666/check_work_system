@@ -38,6 +38,24 @@ public class SubmitWorkDao {
     }
 
     /**
+     * 通过作业id列表查询提交作业列表
+     *
+     * @param workIds
+     *
+     * @return
+     */
+    public List<SubmitWork> getByWorkIds(List<Long> workIds) {
+        if (CollectionUtils.isEmpty(workIds)) {
+            return Collections.emptyList();
+        }
+        SubmitWorkExample submitWorkExample = new SubmitWorkExample();
+        SubmitWorkExample.Criteria criteria = submitWorkExample.createCriteria();
+        criteria.andWorkIdIn(workIds);
+        criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
+        return submitWorkMapper.selectByExample(submitWorkExample);
+    }
+
+    /**
      * 通过提交submitWorkId列表查询SubmitWork列表
      *
      * @param submitWorkIds

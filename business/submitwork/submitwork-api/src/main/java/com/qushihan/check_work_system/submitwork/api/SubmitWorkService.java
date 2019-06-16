@@ -39,4 +39,13 @@ public interface SubmitWorkService {
      * @return
      */
     int updateBySubmitWorkId(SubmitWorkDto submitWorkDto);
+
+    /**
+     * 通过作业id列表查询提交作业Dto列表
+     *
+     * @param workIds
+     *
+     * @return
+     */
+    List<SubmitWorkDto> getByWorkIds(List<Long> workIds);
 }

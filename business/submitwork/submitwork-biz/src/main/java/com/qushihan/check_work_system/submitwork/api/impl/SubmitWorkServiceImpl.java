@@ -38,13 +38,17 @@ public class SubmitWorkServiceImpl implements SubmitWorkService {
         if (CollectionUtils.isEmpty(submitWorks)) {
             return Collections.emptyList();
         }
+        return groupSubmitWorkDtoList(submitWorks);
+    }
+
+    private List<SubmitWorkDto> groupSubmitWorkDtoList(List<SubmitWork> submitWorks) {
         List<Long> studentIds = submitWorks.stream()
                 .map(SubmitWork::getStudentId)
                 .collect(Collectors.toList());
-        List<StudentDto> studentDtos = studentService.getByStudentIdList(studentIds);
+        List<StudentDto> studentDtos = studentService.getByStudentIds(studentIds);
         Map<Long, StudentDto> studentDtoMap = studentDtos.stream()
                 .collect(Collectors.toMap(StudentDto::getStudentId, Function.identity()));
-        List<SubmitWorkDto> submitWorkDtos = submitWorks.stream().map(submitWork -> {
+        return submitWorks.stream().map(submitWork -> {
             SubmitWorkDto submitWorkDto = new SubmitWorkDto();
             BeanUtils.copyProperties(submitWork, submitWorkDto);
             Long studentId = Optional.ofNullable(submitWork.getStudentId())
@@ -55,7 +59,6 @@ public class SubmitWorkServiceImpl implements SubmitWorkService {
             submitWorkDto.setStudentName(studentName);
             return submitWorkDto;
         }).collect(Collectors.toList());
-        return submitWorkDtos;
     }
 
     @Override
@@ -91,5 +94,14 @@ public class SubmitWorkServiceImpl implements SubmitWorkService {
     @Override
     public int updateBySubmitWorkId(SubmitWorkDto submitWorkDto) {
         return submitWorkBizService.updateBySubmitWorkId(submitWorkDto);
+    }
+
+    @Override
+    public List<SubmitWorkDto> getByWorkIds(List<Long> workIds) {
+        List<SubmitWork> submitWorks = submitWorkDao.getByWorkIds(workIds);
+        if (CollectionUtils.isEmpty(submitWorks)) {
+            return Collections.emptyList();
+        }
+        return groupSubmitWorkDtoList(submitWorks);
     }
 }

@@ -39,7 +39,7 @@
                     url: '/teacher/logout',
                     type: 'get',
                     statusCode: {
-                        200: function (data) {
+                        200: function () {
                             window.location = "/"
                         }
                     }

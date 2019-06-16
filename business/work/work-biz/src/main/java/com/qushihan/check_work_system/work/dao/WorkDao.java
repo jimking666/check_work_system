@@ -76,20 +76,17 @@ public class WorkDao {
      * 通过作业id更改作业记录
      *
      * @param work
-     * @param workId
      *
      * @return
      */
-    public int updateWorkByWorkId(Work work, Long workId) {
+    public int updateByWorkId(Work work) {
         if (!Optional.ofNullable(work).isPresent()) {
-            return 0;
-        }
-        if (!Optional.ofNullable(workId).isPresent()) {
             return 0;
         }
         WorkExample workExample = new WorkExample();
         WorkExample.Criteria criteria = workExample.createCriteria();
-        criteria.andWorkIdEqualTo(workId);
+        criteria.andWorkIdEqualTo(work.getWorkId());
+        criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
         return workMapper.updateByExampleSelective(work, workExample);
     }
 
@@ -107,5 +104,24 @@ public class WorkDao {
         }
         criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
         return workMapper.selectByExample(workExample);
+    }
+
+    /**
+     * 通过作业id获取作业记录
+     *
+     * @param workId
+     * @return
+     */
+    public Work getByWorkId(Long workId)  {
+        if (!Optional.ofNullable(workId).isPresent()) {
+            return new Work();
+        }
+        WorkExample workExample = new WorkExample();
+        WorkExample.Criteria criteria = workExample.createCriteria();
+        criteria.andWorkIdEqualTo(workId);
+        criteria.andIsdelEqualTo(FieldIsdelStatus.ISDEL_FALSE.getIsdel());
+        return workMapper.selectByExample(workExample).stream()
+                .findFirst()
+                .orElse(new Work());
     }
 }

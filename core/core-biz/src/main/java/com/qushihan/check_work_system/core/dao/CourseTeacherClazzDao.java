@@ -79,23 +79,6 @@ public class CourseTeacherClazzDao {
     }
 
     /**
-     * 通过课程教师班级id删除课程教师班级记录
-     *
-     * @param courseTeacherClazzId
-     *
-     * @return
-     */
-    public int deleteCourseTeacherClazzByCourseTeacherClazzId(Long courseTeacherClazzId) {
-        if (!Optional.ofNullable(courseTeacherClazzId).isPresent()) {
-            return 0;
-        }
-        CourseTeacherClazzExample courseTeacherClazzExample = new CourseTeacherClazzExample();
-        CourseTeacherClazzExample.Criteria criteria = courseTeacherClazzExample.createCriteria();
-        criteria.andCourseTeacherClazzIdEqualTo(courseTeacherClazzId);
-        return courseTeacherClazzMapper.deleteByExample(courseTeacherClazzExample);
-    }
-
-    /**
      * 通过课程教师班级id去查询课程教师班级列表
      *
      * @param courseTeacherClazzId

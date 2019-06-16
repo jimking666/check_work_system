@@ -36,17 +36,16 @@ public class WorkServiceImpl implements WorkService {
     private CourseTeacherClazzService courseTeacherClazzService;
 
     @Override
-    public List<WorkDto> queryWorkDtoListByCourseTeacherClazzId(Long courseTeacherClazzId) {
+    public List<WorkDto> getByCourseTeacherClazzId(Long courseTeacherClazzId) {
         List<Work> works = workDao.getByCourseTeacherClazzId(courseTeacherClazzId);
         if (CollectionUtils.isEmpty(works)) {
-            return Collections.EMPTY_LIST;
+            return Collections.emptyList();
         }
-        List<WorkDto> workDtos = works.stream().map(work -> {
+        return works.stream().map(work -> {
             WorkDto workDto = new WorkDto();
             BeanUtils.copyProperties(work, workDto);
             return workDto;
         }).collect(Collectors.toList());
-        return workDtos;
     }
 
     @Override
@@ -80,9 +79,9 @@ public class WorkServiceImpl implements WorkService {
                 .collect(Collectors.toList());
         submitWorkDtos.forEach(submitWorkDto -> submitWorkService.updateBySubmitWorkId(submitWorkDto));
         // 软删除该作业
-        Work work = new Work();
+        Work work = workDao.getByWorkId(workId);
         work.setIsdel(FieldIsdelStatus.ISDEL_TRUE.getIsdel());
-        workDao.updateWorkByWorkId(work, workId);
+        workDao.updateByWorkId(work);
         // 作业数量减一
         CourseTeacherClazzDto courseTeacherClazzDto = courseTeacherClazzService.getByCourseTeacherClazzId(courseTeacherClazzId);
         List<Work> works = workDao.getByCourseTeacherClazzId(courseTeacherClazzId);
@@ -101,5 +100,12 @@ public class WorkServiceImpl implements WorkService {
                     return workDto;
                 })
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public int updateByWorkId(WorkDto workDto) {
+        Work work = new Work();
+        BeanUtils.copyProperties(workDto, work);
+        return workDao.updateByWorkId(work);
     }
 }

@@ -40,7 +40,7 @@ public class WorkController {
     public void releaseWorkDetail(@RequestBody ReleaseWorkDetailRequest releaseWorkDetailRequest,
             HttpServletRequest request, HttpServletResponse response) {
         Long courseTeacherClazzId = TransitionUtil.stringToLong(releaseWorkDetailRequest.getCourseTeacherClazzId());
-        List<WorkDto> workDtos = workService.queryWorkDtoListByCourseTeacherClazzId(courseTeacherClazzId);
+        List<WorkDto> workDtos = workService.getByCourseTeacherClazzId(courseTeacherClazzId);
         request.getServletContext().setAttribute("workDtos", workDtos);
         request.getServletContext().setAttribute("courseTeacherClazzId", courseTeacherClazzId);
         PrintWriterUtil.print("发布作业详情查询成功", response);
@@ -61,7 +61,7 @@ public class WorkController {
         String createMessge = workService.createWork(workTitle, workContent, repetitiveRate, courseTeacherClazzId);
         TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
         List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherDto.getTeacherId());
-        List<WorkDto> workDtos = workService.queryWorkDtoListByCourseTeacherClazzId(courseTeacherClazzId);
+        List<WorkDto> workDtos = workService.getByCourseTeacherClazzId(courseTeacherClazzId);
         request.getServletContext().setAttribute("courseTeacherClazzDtos", courseTeacherClazzDtos);
         request.getServletContext().setAttribute("workDtos", workDtos);
         PrintWriterUtil.print(createMessge, response);
@@ -78,6 +78,11 @@ public class WorkController {
         Long workId = TransitionUtil.stringToLong(deleteWorkRequest.getWorkId());
         Long courseTeacherClazzId = (Long) request.getServletContext().getAttribute("courseTeacherClazzId");
         String deleteMessge = workService.deleteWork(workId, courseTeacherClazzId);
+        TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
+        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherDto.getTeacherId());
+        List<WorkDto> workDtos = workService.getByCourseTeacherClazzId(courseTeacherClazzId);
+        request.getServletContext().setAttribute("courseTeacherClazzDtos", courseTeacherClazzDtos);
+        request.getServletContext().setAttribute("workDtos", workDtos);
         PrintWriterUtil.print(deleteMessge, response);
     }
 
@@ -96,7 +101,7 @@ public class WorkController {
                 .map(WorkDto::getWorkId)
                 .collect(Collectors.toList());
         Long courseTeacherClazzId = (Long) request.getServletContext().getAttribute("courseTeacherClazzId");
-        List<WorkDto> workDtos = workService.queryWorkDtoListByCourseTeacherClazzId(courseTeacherClazzId);
+        List<WorkDto> workDtos = workService.getByCourseTeacherClazzId(courseTeacherClazzId);
         workDtos = workDtos.stream()
                 .filter(workDto -> workIds.contains(workDto.getWorkId()))
                 .collect(Collectors.toList());

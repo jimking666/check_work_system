@@ -31,15 +31,7 @@
             })
             // 回到作业管理页面
             $("#goBackWorkManagement").click(function () {
-                $.ajax({
-                    url: '/courseTeacherClazz/refreshData',
-                    type: 'get',
-                    statusCode: {
-                        200: function () {
-                            window.location = "/workManagement"
-                        }
-                    }
-                })
+                window.location = "/workManagement"
             })
             // 点击退出登陆触发事件
             $("#logout").click(function () {
@@ -147,22 +139,7 @@
                     statusCode: {
                         200: function (data) {
                             if (data.indexOf("删除成功") != -1) {
-                                alert("删 除 成 功 !")
-                                $.ajax({
-                                    url: "/work/releaseWorkDetail",
-                                    type: "post",
-                                    data: JSON.stringify({
-                                        "courseTeacherClazzId": $("#courseTeacherClazzId1").val()
-                                    }),
-                                    contentType: "application/json;charset=utf-8",
-                                    statusCode: {
-                                        200: function (data) {
-                                            if (data.indexOf("发布作业详情查询成功") != -1) {
-                                                window.location = "/releaseWorkDetail"
-                                            }
-                                        }
-                                    }
-                                })
+                                window.location = "/releaseWorkDetail"
                             }
                         }
                     }

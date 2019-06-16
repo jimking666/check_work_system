@@ -52,13 +52,17 @@ public class CourseTeacherClazzController {
      * 删除课程教师班级
      *
      * @param deleteCourseTeacherClazzRequest
+     * @param request
      * @param response
      */
     @PostMapping("/delete")
     public void deleteCourseTeacherClazz(@RequestBody DeleteCourseTeacherClazzRequest deleteCourseTeacherClazzRequest,
-            HttpServletResponse response) {
+                                         HttpServletRequest request, HttpServletResponse response) {
         Long courseTeacherClazzId = TransitionUtil.stringToLong(deleteCourseTeacherClazzRequest.getCourseTeacherClazzId());
         String deleteMessage = courseTeacherClazzService.deleteCourseTeacherClazz(courseTeacherClazzId);
+        TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
+        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherDto.getTeacherId());
+        request.getServletContext().setAttribute("courseTeacherClazzDtos", courseTeacherClazzDtos);
         PrintWriterUtil.print(deleteMessage, response);
     }
 
@@ -83,13 +87,5 @@ public class CourseTeacherClazzController {
                 .collect(Collectors.toList());
         request.getServletContext().setAttribute("courseTeacherClazzDtos", courseTeacherClazzDtos);
         PrintWriterUtil.print("查询成功", response);
-    }
-
-    @GetMapping(value = "/refreshData")
-    public void refreshData(HttpServletRequest request, HttpServletResponse response) {
-        TeacherDto teacherDto = (TeacherDto) request.getServletContext().getAttribute("teacherDto");
-        List<CourseTeacherClazzDto> courseTeacherClazzDtos = courseTeacherClazzService.getByTeacherId(teacherDto.getTeacherId());
-        request.getServletContext().setAttribute("courseTeacherClazzDtos", courseTeacherClazzDtos);
-        PrintWriterUtil.print("刷新成功", response);
     }
 }

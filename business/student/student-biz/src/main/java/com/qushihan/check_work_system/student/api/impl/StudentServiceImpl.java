@@ -47,7 +47,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public List<StudentDto> getByStudentIdList(List<Long> studentIds) {
+    public List<StudentDto> getByStudentIds(List<Long> studentIds) {
         List<Student> students = studentDao.getByStudentIdList(studentIds);
         return students.stream()
                 .map(student ->

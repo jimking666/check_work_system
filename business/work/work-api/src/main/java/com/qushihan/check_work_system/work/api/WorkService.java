@@ -13,7 +13,7 @@ public interface WorkService {
      *
      * @return
      */
-    List<WorkDto> queryWorkDtoListByCourseTeacherClazzId(Long courseTeacherClazzId);
+    List<WorkDto> getByCourseTeacherClazzId(Long courseTeacherClazzId);
 
 
     /**
@@ -43,4 +43,12 @@ public interface WorkService {
      * @return
      */
     List<WorkDto> getBySearchWorkTitle(String searchWorkTitle);
+
+    /**
+     * 通过作业id修改作业记录
+     *
+     * @param workDto
+     * @return
+     */
+    int updateByWorkId(WorkDto workDto);
 }

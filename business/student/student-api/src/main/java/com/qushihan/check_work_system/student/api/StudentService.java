@@ -29,7 +29,7 @@ public interface StudentService {
      * @param studentIds
      * @return
      */
-    List<StudentDto> getByStudentIdList(List<Long> studentIds);
+    List<StudentDto> getByStudentIds(List<Long> studentIds);
 
     /**
      * 通过搜索学生名称获取学生
