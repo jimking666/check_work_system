@@ -3,23 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a0a978ed-af39-4987-8c2a-a260de65e57a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/courseTeacherClazz/CourseTeacherClazzController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/courseTeacherClazz/CourseTeacherClazzController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/work/WorkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/work/WorkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/clazzStudentDetail.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/clazzStudentDetail.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/releaseWorkDetail.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/student/student-api/src/main/java/com/qushihan/check_work_system/student/api/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/student/student-api/src/main/java/com/qushihan/check_work_system/student/api/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/api/impl/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/student/student-biz/src/main/java/com/qushihan/check_work_system/student/api/impl/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/submitwork/submitwork-api/src/main/java/com/qushihan/check_work_system/submitwork/api/SubmitWorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/submitwork/submitwork-api/src/main/java/com/qushihan/check_work_system/submitwork/api/SubmitWorkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/api/impl/SubmitWorkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/api/impl/SubmitWorkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/dao/SubmitWorkDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/submitwork/submitwork-biz/src/main/java/com/qushihan/check_work_system/submitwork/dao/SubmitWorkDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/work/work-api/src/main/java/com/qushihan/check_work_system/work/api/WorkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/work/work-api/src/main/java/com/qushihan/check_work_system/work/api/WorkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/dao/WorkDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/dao/WorkDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core-biz/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-biz/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/api/impl/CourseTeacherClazzServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/api/impl/CourseTeacherClazzServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/dao/CourseTeacherClazzDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-biz/src/main/java/com/qushihan/check_work_system/core/dao/CourseTeacherClazzDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core-biz/target/classes/com/qushihan/check_work_system/core/api/impl/CourseTeacherClazzServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-biz/target/classes/com/qushihan/check_work_system/core/api/impl/CourseTeacherClazzServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core-biz/target/classes/com/qushihan/check_work_system/core/dao/CourseTeacherClazzDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/core-biz/target/classes/com/qushihan/check_work_system/core/dao/CourseTeacherClazzDao.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/app/target/" />
@@ -96,8 +79,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/courseTeacherClazz/CourseTeacherClazzController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="82" column="100" lean-forward="true" selection-start-line="82" selection-start-column="100" selection-end-line="82" selection-end-column="100" />
+            <state relative-caret-position="346">
+              <caret line="80" column="37" lean-forward="true" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -1645,7 +1628,7 @@
     <property name="SearchEverywhereHistoryKey" value="DeleteCourse&#9;FILE&#9;file://C:/Users/JimKing/IdeaProjects/check_work_system/business/course/course-api/src/main/java/com/qushihan/check_work_system/course/enums/DeleteCourseStatus.java&#10;DeletCourse&#9;PSI&#9;JAVA://com.qushihan.check_work_system.course.dto.DeleteCourseRequest&#10;WorkServiceImpl&#9;FILE&#9;file://C:/Users/JimKing/IdeaProjects/check_work_system/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/api/impl/WorkServiceImpl.java&#10;WorkU&#9;FILE&#9;file://C:/Users/JimKing/IdeaProjects/check_work_system/business/work/work-biz/src/main/java/com/qushihan/check_work_system/work/util/WorkUtil.java&#10;teacherU&#9;FILE&#9;file://C:/Users/JimKing/IdeaProjects/check_work_system/business/teacher/teacher-biz/src/main/java/com/qushihan/check_work_system/teacher/util/TeacherUtil.java&#10;TeacherUtil&#9;PSI&#9;JAVA://com.qushihan.check_work_system.teacher.util.TeacherUtil&#10;CourseTeacherClazzU&#9;PSI&#9;JAVA://com.qushihan.check_work_system.core.util.CourseTeacherClazzUtil&#10;CourseU&#9;PSI&#9;JAVA://com.qushihan.check_work_system.course.util.CourseUtil&#10;Request&#9;PSI&#9;JAVA://com.qushihan.check_work_system.clazz.dto.CreateClazzRequest&#10;work&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/biyesheji/check_work_system/.idea/workspace.xml&#10;gitignore&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/biyesheji/check_work_system/app/.gitignore&#10;workSpa&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/biyesheji/check_work_system/.idea/workspace.xml&#10;Work&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/business/work/work-api/src/main/java/com/qushihan/check_work_system/work/dto/WorkDto.java&#10;SubmitWorkDto&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/business/submitwork/submitwork-api/src/main/java/com/qushihan/check_work_system/submitwork/dto/SubmitWorkDto.java&#10;WorkDto&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/business/work/work-api/src/main/java/com/qushihan/check_work_system/work/dto/WorkDto.java&#10;SubmitWork&#9;PSI&#9;JAVA://com.qushihan.check_work_system.submitwork.model.auto.SubmitWork&#10;CreateCourseStatus&#9;FILE&#9;file:///Users/bjhl/IdeaProjects/check_work_system/core/core-api/src/main/java/com/qushihan/check_work_system/core/enums/CreateCourseTeacherClazzStatus.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560686624372" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560693320025" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -1748,16 +1731,15 @@
       <workItem from="1560505780629" duration="1696000" />
       <workItem from="1560516829226" duration="2414000" />
       <workItem from="1560574785889" duration="1328000" />
-      <workItem from="1560641038935" duration="20562000" />
+      <workItem from="1560641038935" duration="22333000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="358590000" />
+    <option name="totallyTimeSpent" value="360361000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20978552" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -2149,8 +2131,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/qushihan/check_work_system/app/controller/courseTeacherClazz/CourseTeacherClazzController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="82" column="100" lean-forward="true" selection-start-line="82" selection-start-column="100" selection-end-line="82" selection-end-column="100" />
+        <state relative-caret-position="346">
+          <caret line="80" column="37" lean-forward="true" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
         </state>
       </provider>
     </entry>
