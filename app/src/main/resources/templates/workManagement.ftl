@@ -123,7 +123,7 @@
                 $.ajax({
                     url: "/courseTeacherClazz/delete",
                     type: "post",
-                    data: JSON.stringify({
+                    data: JSONclazzDtos.stringify({
                         "courseTeacherClazzId": $("#courseTeacherClazzId").val()
                     }),
                     contentType: "application/json;charset=utf-8",

@@ -6,6 +6,8 @@ import java.util.stream.Collectors;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.qushihan.check_work_system.clazz.api.ClazzService;
+import com.qushihan.check_work_system.clazz.dto.ClazzDto;
 import com.qushihan.check_work_system.student.dto.GetStudentBySearchRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,6 +27,9 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+    @Autowired
+    private ClazzService clazzService;
+
     /**
      * 学生详情
      *
@@ -37,8 +42,10 @@ public class StudentController {
             HttpServletResponse response) {
         Long clazzId = TransitionUtil.stringToLong(studentDetailRequest.getClazzId());
         List<StudentDto> studentDtos = studentService.getByClazzId(clazzId);
+        List<ClazzDto> clazzDtos = clazzService.queryAllClazz();
         request.getServletContext().setAttribute("studentDtos", studentDtos);
         request.getServletContext().setAttribute("clazzIdForStudent", clazzId);
+        request.getServletContext().setAttribute("searchClazzDtos", clazzDtos);
         PrintWriterUtil.print("学生详情查询成功", response);
     }
 
